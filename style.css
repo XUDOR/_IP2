@@ -1,0 +1,71 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Main content area using CSS Grid */
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: auto;
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Album art area */
+.album-art {
+  background-color: #f0f0f0;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* Makes the div a square */
+  background-image: url('path/to/your/album-art.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Sidebar styling */
+.sidebar {
+  background-color: #e0e0e0;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Sticky footer */
+footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  main {
+      grid-template-columns: 1fr;
+  }
+
+  .album-art, .sidebar {
+      padding-bottom: 0;
+      height: auto;
+  }
+}
