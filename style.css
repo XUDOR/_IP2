@@ -1,4 +1,4 @@
-/* Reset default browser styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -18,17 +18,30 @@ body {
 
 /* Header styling */
 header {
+  display: inline-flex;
+  flex-direction: row;
   background-color: #083D5E;
   border: 1px solid #cadbda;
   color: #cadbda;
-  padding: 20px;
+  padding: 10px;
+  margin: 5px;
   text-align: center;
 }
 
-.headTag {
-font-size: 1em;
-text-align: left;
+.Logo {
+  border: 1px solid #cadbda;
+  font-size: 1em;
+  text-align: left;
+  padding: 10px;
+  margin: 5px;
+}
 
+.Nav {
+  border: 1px solid #cadbda;
+  font-size: 1em;
+  text-align: left;
+  padding: 10px;
+  margin: 5px;
 }
 
 /* Main content area using CSS Grid */
@@ -48,7 +61,8 @@ main {
   color: #cadbda;
   position: relative;
   width: 100%;
-  padding-bottom: 100%; /* Makes the div a square */
+  padding-bottom: 100%;
+  /* Makes the div a square */
   background-image: url('path/to/your/album-art.jpg');
   background-size: cover;
   background-position: center;
@@ -67,7 +81,7 @@ main {
 
 /* Sticky footer */
 footer {
-  
+
   background-color: #083D5E;
   border: 1px solid #cadbda;
   color: #fff;
@@ -87,7 +101,8 @@ footer {
 }
 
 .player {
-  display: flex;  /* Add this if you want flexbox alignment */
+  display: flex;
+  /* Add this if you want flexbox alignment */
   background-color: #2b7f8c;
   color: #cadbda;
   justify-content: left;
@@ -105,18 +120,51 @@ footer {
   width: 100px;
   color: #cadbda;
   padding: .2em;
-  
+
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
 
-  main {
-      grid-template-columns: 1fr;
+  /* Adjust body font size for better readability on mobile */
+  body {
+    font-size: 0.8em;
   }
 
-  .album-art, .sidebar {
-      padding-bottom: 0;
-      height: auto;
+  /* Stack main content in a single column */
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  /* Album art and sidebar adjustments */
+  .album-art,
+  .sidebar {
+    padding-bottom: 0;
+    height: auto;
+  }
+
+  /* Footer container adjustments for mobile */
+  .foot-cont {
+    flex-direction: column;
+    align-items: first baseline;
+    text-align: left;
+  }
+
+  /* Footer font and alignment adjustments */
+  .player {
+    font-size: 1.3em;
+    margin-right: 0; /* Center-align */
+    width: auto; /* Expand to full width if desired */
+  }
+
+  .footTag {
+    font-size: 1em;
+    width: auto; /* Adjust width for centering */
+    margin-top: 0.5em; /* Add spacing between elements */
+  }
+
+  /* Additional padding for footer on mobile */
+  footer {
+    padding: 1em;
   }
 }
