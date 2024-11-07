@@ -790,7 +790,7 @@ function playSong(songId) {
     player.innerHTML = ''; // Clear previous content
 
     const nowPlaying = document.createElement('p');
-    nowPlaying.textContent = `Now Playing: ${song.name}`;
+    nowPlaying.textContent = `${song.name}`;
     player.appendChild(nowPlaying);
 
     // Create audio element and play the song
