@@ -46,31 +46,29 @@ header {
 
 /* Main content area using CSS Grid */
 main {
-  flex: 1;
   display: grid;
-  grid-template-columns: 75% 25%;
-  grid-template-rows: auto;
-  gap: 10px;
-  padding: 20px;
+  grid-template-columns: 3fr 1fr; /* Adjusts the sidebar width */
+  grid-gap: 20px;
 }
 
+
 /* Updated Album Art styling */
+
 .album-art {
-  background-color: #083D5E;
-  border: 1px solid #cadbda;
-  color: #cadbda;
-  position: relative;
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px; /* Spacing between thumbnails */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 10px; /* Adjust the gap between images */
 }
+
+
+
 .album-art img {
-  width: 200px; /* Set the size for thumbnails */
-  height: 200px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* Maintains a square aspect ratio */
   object-fit: cover;
 }
+
 
 
 /* Sidebar styling */
@@ -152,16 +150,18 @@ footer {
     font-size: 0.8em;
   }
 
-  /* Stack main content in a single column */
   main {
     grid-template-columns: 1fr;
   }
 
+  /* Adjust the album-art grid */
+  .album-art {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
 
+  /* Adjust image size and aspect ratio */
   .album-art img {
-    width: 90px; /* Set the size for thumbnails */
-    height: 90px;
-    object-fit: cover;
+    aspect-ratio: 1 / 1;
   }
 
   /* Album art and sidebar adjustments */
