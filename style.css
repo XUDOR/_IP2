@@ -95,9 +95,8 @@ main {
 .albumDescription {
   color: #8ab7ce;
   margin-bottom: .8em;
-
-
 }
+
 
 
 /* Sticky footer */
@@ -123,15 +122,16 @@ footer {
 
 .player {
   display: flex;
+  flex-direction: row;
   /* Add this if you want flexbox alignment */
   background-color: #2b7f8c;
   color: #cadbda;
   justify-content: left;
   align-items: center;
   text-align: left;
-  width: auto;
+  width: 98%;
   padding: 0.2em;
-  margin-right: 0.2em;
+  margin: 0.5em;
 }
 
 .footTag {
@@ -167,8 +167,12 @@ footer {
   /* Album art and sidebar adjustments */
   .album-art,
   .sidebar {
-    padding-bottom: 0;
+    padding-bottom: 20px;
     height: auto;
+  }
+
+  .sidebar {
+    font-size: .9em;
   }
 
   /* Footer container adjustments for mobile */
@@ -180,6 +184,7 @@ footer {
 
   /* Footer font and alignment adjustments */
   .player {
+    flex-direction: column;
     font-size: 1.3em;
     margin-right: 0; /* Center-align */
     width: auto; /* Expand to full width if desired */
