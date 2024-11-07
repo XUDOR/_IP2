@@ -786,21 +786,166 @@ function playSong(songId) {
   const song = data.songs[songId];
   if (song) {
     // Update the player in the footer with the song details
-    const player = document.querySelector('.player');
-    player.innerHTML = ''; // Clear previous content
+    const playerContainer = document.querySelector('.player');
+    playerContainer.innerHTML = ''; // Clear previous content
 
+    // Now Playing Title
     const nowPlaying = document.createElement('p');
     nowPlaying.textContent = `${song.name}`;
-    player.appendChild(nowPlaying);
+    playerContainer.appendChild(nowPlaying);
 
-    // Create audio element and play the song
+    // Create audio element without controls
     const audio = document.createElement('audio');
     audio.src = song.audio_url;
-    audio.controls = true;
-    audio.autoplay = true;
-    player.appendChild(audio);
+    audio.id = 'audio-player';
+    playerContainer.appendChild(audio);
+
+    // Create custom controls container
+    const controls = document.createElement('div');
+    controls.classList.add('custom-audio-controls');
+
+    // Play/Pause button
+    const playPauseBtn = document.createElement('button');
+    playPauseBtn.id = 'play-pause';
+    playPauseBtn.classList.add('play'); // Initial state is 'play'
+    controls.appendChild(playPauseBtn);
+
+    // Progress bar container
+    const progressContainer = document.createElement('div');
+    progressContainer.classList.add('progress-container');
+
+    // Progress bar
+    const progressBar = document.createElement('div');
+    progressBar.classList.add('progress-bar');
+    progressContainer.appendChild(progressBar);
+
+    controls.appendChild(progressContainer);
+
+    // Time display
+    const timeDisplay = document.createElement('div');
+    timeDisplay.classList.add('time-display');
+
+    const currentTime = document.createElement('span');
+    currentTime.id = 'current-time';
+    currentTime.textContent = '0:00';
+    timeDisplay.appendChild(currentTime);
+
+    const separator = document.createElement('span');
+    separator.textContent = ' / ';
+    timeDisplay.appendChild(separator);
+
+    const duration = document.createElement('span');
+    duration.id = 'duration';
+    duration.textContent = '0:00';
+    timeDisplay.appendChild(duration);
+
+    controls.appendChild(timeDisplay);
+
+    // Volume control
+    const volumeControl = document.createElement('div');
+    volumeControl.classList.add('volume-control');
+
+    const volumeIcon = document.createElement('button');
+    volumeIcon.id = 'mute-unmute';
+    volumeIcon.classList.add('volume'); // Initial state is 'volume'
+    volumeControl.appendChild(volumeIcon);
+
+    const volumeSlider = document.createElement('input');
+    volumeSlider.type = 'range';
+    volumeSlider.id = 'volume-slider';
+    volumeSlider.min = 0;
+    volumeSlider.max = 1;
+    volumeSlider.step = 0.01;
+    volumeSlider.value = 1;
+    volumeControl.appendChild(volumeSlider);
+
+    controls.appendChild(volumeControl);
+
+    playerContainer.appendChild(controls);
+
+    // Event listeners
+
+    // Play/Pause functionality
+    playPauseBtn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        playPauseBtn.classList.remove('play');
+        playPauseBtn.classList.add('pause');
+      } else {
+        audio.pause();
+        playPauseBtn.classList.remove('pause');
+        playPauseBtn.classList.add('play');
+      }
+    });
+
+    // Update progress bar and time display
+    audio.addEventListener('timeupdate', () => {
+      const progressPercent = (audio.currentTime / audio.duration) * 100;
+      progressBar.style.width = `${progressPercent}%`;
+      currentTime.textContent = formatTime(audio.currentTime);
+      duration.textContent = formatTime(audio.duration);
+    });
+
+    // Seek functionality
+    progressContainer.addEventListener('click', (e) => {
+      const rect = progressContainer.getBoundingClientRect();
+      const offsetX = e.clientX - rect.left;
+      const totalWidth = rect.width;
+      const clickPositionRatio = offsetX / totalWidth;
+      audio.currentTime = clickPositionRatio * audio.duration;
+    });
+
+    // Mute/Unmute functionality
+    volumeIcon.addEventListener('click', () => {
+      audio.muted = !audio.muted;
+      if (audio.muted) {
+        volumeIcon.classList.remove('volume');
+        volumeIcon.classList.add('muted');
+      } else {
+        volumeIcon.classList.remove('muted');
+        volumeIcon.classList.add('volume');
+      }
+    });
+
+    // Volume slider functionality
+    volumeSlider.addEventListener('input', () => {
+      audio.volume = volumeSlider.value;
+      if (audio.volume === 0) {
+        audio.muted = true;
+        volumeIcon.classList.remove('volume');
+        volumeIcon.classList.add('muted');
+      } else {
+        audio.muted = false;
+        volumeIcon.classList.remove('muted');
+        volumeIcon.classList.add('volume');
+      }
+    });
+
+    // Helper function to format time
+    function formatTime(seconds) {
+      if (isNaN(seconds)) {
+        return '0:00';
+      }
+      const minutes = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60);
+      return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+
+    // Set initial duration when metadata is loaded
+    audio.addEventListener('loadedmetadata', () => {
+      duration.textContent = formatTime(audio.duration);
+    });
+
+    // Play the audio automatically
+    audio.play().catch(error => {
+      // Autoplay might be blocked; handle errors here
+      playPauseBtn.classList.remove('pause');
+      playPauseBtn.classList.add('play');
+    });
   }
 }
+
+
 
 // Call the function on page load
 window.onload = loadAlbumArt;
