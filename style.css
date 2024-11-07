@@ -7,7 +7,7 @@
 
 /* Body Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Helvetica, sans-serif;
   background-color: #083D5E;
   color: #cadbda;
   font-size: 1em;
@@ -21,14 +21,20 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2b7f8c;
-  padding: 20px;
-  color: #ffffff;
+  background-color: #083D5E;
+  border: 1px solid #cadbda;
+  color: #cadbda;
+  padding: 10px;
+  margin: 5px;
+  
 }
 
 header .Logo {
-  font-size: 24px;
-  font-weight: bold;
+  border: 1px solid #cadbda;
+  font-size: 1em;
+  text-align: left;
+  padding: 10px;
+  margin: 5px;
 }
 
 header .Nav ul {
@@ -38,12 +44,13 @@ header .Nav ul {
 
 header .Nav ul li {
   margin-left: 20px;
+  margin-right: 5px;
 }
 
 header .Nav ul li a {
-  color: #ffffff;
+  color: #cadbda;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1em;
   transition: color 0.3s;
 }
 
@@ -71,21 +78,22 @@ main {
   margin: 10px;
   object-fit: cover;
   cursor: pointer;
-  border-radius: 8px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  
 }
 
 .album-art img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #cadbda;
+  
 }
 
 .sidebar {
   flex: 1;
   margin-left: 20px;
   padding: 10px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
+  background-color: #083D5E;
+  border-left: 1px solid #cadbda;
+  font-size: .8em;
+  
 }
 
 .sidebar .albumDetails {
@@ -94,13 +102,15 @@ main {
 
 .sidebar .albumName {
   font-size: 24px;
-  margin-bottom: 10px;
+  border-bottom: 1px solid #2b7f8c;
+  margin-bottom: 3px;
+  padding: 2px;
   color: #2b7f8c;
 }
 
 .sidebar .albumDescription {
-  font-size: 16px;
-  margin-bottom: 20px;
+  color: #8ab7ce;
+  margin-bottom: .8em;
 }
 
 .sidebar .songListContainer {
@@ -119,7 +129,7 @@ main {
 }
 
 .sidebar .songList li:hover {
-  background-color: #e6f7ff;
+  background-color: #2b7f8c;
 }
 
 .sidebar .songList li:last-child {
