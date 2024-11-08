@@ -30,12 +30,20 @@ header {
 }
 
 header .Logo {
-  border: 1px solid #cadbda;
-  font-size: 1em;
-  text-align: left;
-  padding: 10px;
+  /* Remove the fixed width */
+  /* width: 100px; */
+  padding: 5px;
   margin: 5px;
 }
+
+header .Logo img {
+  width: 200px; /* Set the desired width */
+  height: auto;
+  display: block;
+}
+
+
+
 
 header .Nav ul {
   list-style: none;
@@ -198,7 +206,7 @@ footer {
 
 /* Replace the paths below with your actual icon paths */
 .custom-audio-controls button.play {
-  background-image: url('assets/play.png');
+  background-image: url('assets/CASS-PLAY-v2.svg');
 }
 
 .custom-audio-controls button.pause {
