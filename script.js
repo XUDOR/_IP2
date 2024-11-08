@@ -792,6 +792,7 @@ function playSong(songId) {
     // Now Playing Title
     const nowPlaying = document.createElement('p');
     nowPlaying.textContent = `${song.name}`;
+    nowPlaying.classList.add('PlayerSong');
     playerContainer.appendChild(nowPlaying);
 
     // Create audio element without controls
