@@ -179,7 +179,7 @@ footer {
 .custom-audio-controls {
   display: flex;
   align-items: center;
-  background-color: #f2f2f7;
+  background-color: #cadbda;
   padding: 10px;
   border-radius: 8px;
   width: 100%;
@@ -210,7 +210,7 @@ footer {
 }
 
 .custom-audio-controls button.pause {
-  background-image: url('assets/pause.png');
+  background-image: url('assets/CASS-PAUSE.svg');
 }
 
 .custom-audio-controls .volume-control button.volume {
@@ -234,14 +234,14 @@ footer {
 .custom-audio-controls .progress-bar {
   width: 0%;
   height: 100%;
-  background-color: #007aff;
+  background-color: #1D4450;
   border-radius: 2px;
 }
 
 .custom-audio-controls .time-display {
   font-size: 0.9em;
   margin-right: 10px;
-  color: #333333;
+  color: #1D4450;
   min-width: 60px;
 }
 
@@ -264,20 +264,20 @@ footer {
 /* Slider Track */
 .custom-audio-controls .volume-control input[type="range"]::-webkit-slider-runnable-track {
   height: 4px;
-  background: #c6c6c8;
+  background: #1D4450;
   border-radius: 2px;
 }
 
 .custom-audio-controls .volume-control input[type="range"]::-moz-range-track {
   height: 4px;
-  background: #c6c6c8;
+  background: #1D4450;
   border-radius: 2px;
 }
 
 /* Slider Thumb */
 .custom-audio-controls .volume-control input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  background: #007aff;
+  background: #1D4450;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -285,7 +285,7 @@ footer {
 }
 
 .custom-audio-controls .volume-control input[type="range"]::-moz-range-thumb {
-  background: #007aff;
+  background: #1D4450;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -318,4 +318,16 @@ footer {
       margin-right: 0;
       margin-bottom: 10px;
   }
+
+.foot-cont {
+  flex-direction: column;
+}
+
+
+
+
+
+
+
+
 }
