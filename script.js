@@ -98,6 +98,8 @@ class CartItem {
   }
 }
 
+
+
 // Create the data
 
 // Artists
@@ -685,6 +687,10 @@ album19.songs.push(
   new Song('1910', 'Art District', 'https://storage.googleapis.com/ip-public-bucket1/Rhombus/Art-District.mp3', '00:07:05', 1, 19, 10)
 );
 
+
+
+
+
 // Now, create the data object that contains all the data
 const data = {
   artists: {
@@ -741,8 +747,6 @@ function loadAlbumArt() {
   });
 }
 
-
-
 // Function to display album details when an album is clicked
 function displayAlbumDetails(albumId) {
   const album = data.albums[albumId];
@@ -785,7 +789,7 @@ function displayAlbumDetails(albumId) {
 
       // Add click event to play song
       songItem.addEventListener('click', () => {
-        playSong(song.id);
+        playSong(song.id, albumId); // Pass albumId
       });
     });
 
@@ -797,12 +801,12 @@ function displayAlbumDetails(albumId) {
   }
 }
 
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
-
 // Function to play a song
-function playSong(songId) {
+function playSong(songId, albumId) {
   const song = data.songs[songId];
-  if (song) {
+  const album = data.albums[albumId];
+
+  if (song && album) {
     // Update the player in the footer with the song details
     const playerContainer = document.querySelector('.player');
     playerContainer.innerHTML = ''; // Clear previous content
@@ -961,10 +965,27 @@ function playSong(songId) {
       playPauseBtn.classList.remove('pause');
       playPauseBtn.classList.add('play');
     });
+
+    // Event listener for when the audio ends
+    audio.addEventListener('ended', () => {
+      // Find the current song's index in the album's song list
+      const currentIndex = album.songs.findIndex(s => s.id === songId);
+
+      // Check if there is a next song
+      if (currentIndex + 1 < album.songs.length) {
+        const nextSong = album.songs[currentIndex + 1];
+        playSong(nextSong.id, albumId); // Play the next song
+      } else {
+        // Optionally, you can reset the player or stop playback
+        // For example, reset progress bar and play button
+        playPauseBtn.classList.remove('pause');
+        playPauseBtn.classList.add('play');
+        progressBar.style.width = '0%';
+        currentTime.textContent = '0:00';
+      }
+    });
   }
 }
-
-
 
 // Call the function on page load
 window.onload = loadAlbumArt;
