@@ -147,32 +147,41 @@ main {
 /* Footer Styles */
 footer {
   background-color: #2b7f8c;
-  color: #ffffff;
+  color: #cadbda;
   padding: 10px 20px;
 }
 
 .foot-cont {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: last baseline;
 }
 
 .footTag {
-  font-size: 14px;
+  padding: 10px;
+  font-size: .8em;
 }
 
 /* Custom Audio Player Styles */
 .player {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  align-items: center;
+  align-items: last baseline;
 }
 
 /* Now Playing Title */
 .player p {
   margin-bottom: 5px;
-  font-weight: bold;
+  font-weight: lighter;
+  font-size: 1.2em;
+  text-align: left;
   color: #333333;
+}
+
+.PlayerSong {
+text-align: left;
+
 }
 
 /* Custom Audio Controls */
@@ -191,9 +200,9 @@ footer {
   border: none;
   outline: none;
   cursor: pointer;
-  margin-right: 10px;
-  width: 24px;
-  height: 24px;
+  margin-right: 15px;
+  width: 30px;
+  height: 30px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -223,8 +232,8 @@ footer {
 
 .custom-audio-controls .progress-container {
   flex: 1;
-  height: 4px;
-  background-color: #c6c6c8;
+  height: 15px;
+  background-color: #E0ECED;
   border-radius: 2px;
   margin-right: 10px;
   position: relative;
@@ -251,7 +260,7 @@ footer {
 }
 
 .custom-audio-controls .volume-control input[type="range"] {
-  width: 80px;
+  width: 120px;
   -webkit-appearance: none;
   background: transparent;
   cursor: pointer;
@@ -294,33 +303,75 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* Layout Containers */
   main {
-      flex-direction: column;
+    flex-direction: column;
+    padding: 10px; /* Reduced padding for mobile */
   }
 
   .sidebar {
-      margin-left: 0;
-      margin-top: 20px;
+    margin-left: 0;
+    margin-top: 20px;
+    padding: 15px;
   }
 
+  /* Footer Adjustments */
+  .foot-cont {
+    flex-direction: column;
+    gap: 10px; /* Add space between stacked items */
+    padding: 15px;
+  }
+
+  /* Audio Player Mobile Styles */
   .custom-audio-controls {
-      flex-direction: column;
-      align-items: stretch;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px; /* Consistent spacing between elements */
+    padding: 15px;
   }
 
   .custom-audio-controls .progress-container {
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 10px;
+    width: 100%;
+    margin: 0;
+    height: 20px; /* Slightly larger touch target */
   }
 
   .custom-audio-controls .time-display {
-      margin-right: 0;
-      margin-bottom: 10px;
+    margin: 0;
+    text-align: center;
+    font-size: 1em; /* Slightly larger for better readability */
   }
 
-.foot-cont {
-  flex-direction: column;
+  /* Playback Controls */
+  .custom-audio-controls button {
+    width: 40px; /* Larger touch targets */
+    height: 40px;
+    margin: 0 5px;
+  }
+
+  /* Volume Controls */
+  .custom-audio-controls .volume-control {
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .custom-audio-controls .volume-control input[type="range"] {
+    width: 80%; /* Take up most of the width */
+    margin: 10px 0;
+  }
+
+  /* Album Art Grid Adjustments */
+  .album-art {
+    justify-content: center; /* Center albums on mobile */
+    gap: 5px;
+  }
+
+  .album-art img {
+    width: 150px; /* Slightly smaller on mobile */
+    height: 150px;
+    margin: 5px;
+  }
 }
 
 
