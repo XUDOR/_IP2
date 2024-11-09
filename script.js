@@ -747,13 +747,21 @@ function loadAlbumArt() {
   });
 }
 
+
+//===============================================================================================
+//===============================================================================================
+
 // Function to display album details when an album is clicked
 function displayAlbumDetails(albumId) {
   const album = data.albums[albumId];
   if (album) {
-    // Select the sidebar element
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.innerHTML = ''; // Clear previous content
+    // Select the sidebar content element
+    const sidebarContent = document.querySelector('.sidebar .sidebar-content');
+    sidebarContent.innerHTML = ''; // Clear previous content
+
+    // Open the details element if it's closed
+    const sidebarDetails = document.querySelector('.sidebar-details');
+    sidebarDetails.open = true;
 
     // Create a container for album details
     const albumDetails = document.createElement('div');
@@ -771,8 +779,8 @@ function displayAlbumDetails(albumId) {
     description.textContent = album.description;
     albumDetails.appendChild(description); // Append to albumDetails container
 
-    // Append the albumDetails container to the sidebar
-    sidebar.appendChild(albumDetails);
+    // Append the albumDetails container to the sidebar content
+    sidebarContent.appendChild(albumDetails);
 
     // Create a container for the song list
     const songListContainer = document.createElement('div');
@@ -796,11 +804,14 @@ function displayAlbumDetails(albumId) {
     // Append the song list to the songListContainer
     songListContainer.appendChild(songList);
 
-    // Append the songListContainer to the sidebar
-    sidebar.appendChild(songListContainer);
+    // Append the songListContainer to the sidebar content
+    sidebarContent.appendChild(songListContainer);
   }
 }
 
+
+
+//===============================================================================================
 // Function to play a song
 function playSong(songId, albumId) {
   const song = data.songs[songId];
