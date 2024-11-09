@@ -14,6 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Header Styles */
@@ -54,7 +55,7 @@ header .Nav ul {
 }
 
 header .Nav ul li {
-  margin-left: 20px;
+  margin-left: 5px;
   margin-right: 5px;
   margin-bottom: 10px;
 }
@@ -81,34 +82,38 @@ main {
   padding: 20px;
 }
 
+/* Album Art Container */
 .album-art {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-rows: auto;
   gap: 10px;
-  position: relative; /* Ensure positioning context for child items */
+  position: relative;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 
 
 /* Add this to your CSS file */
 
+/* Album Art Images */
 .album-art img {
   width: 100%;
   height: auto;
   object-fit: cover;
   cursor: pointer;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 
+/* Enlarged Image */
 .album-art img.enlarged {
   grid-column: 1 / -1; /* Span all columns */
   width: 100%;
   height: auto;
-  max-height: 80vh; /* Limit height to 80% of viewport */
+  max-height: 80vh; /* Adjust as needed */
   justify-self: center;
-  align-self: start; /* Optional: align at the top */
 }
 
 .sidebar {
@@ -380,8 +385,7 @@ text-align: left;
 
   /* Album Art Grid Adjustments */
   .album-art {
-    justify-content: center; /* Center albums on mobile */
-    gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 
   .album-art img {
