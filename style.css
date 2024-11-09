@@ -48,11 +48,15 @@ header .Logo img {
 header .Nav ul {
   list-style: none;
   display: flex;
+  flex-direction: column;
+  border: 1px solid #cadbda;
+  padding: 10px;
 }
 
 header .Nav ul li {
   margin-left: 20px;
   margin-right: 5px;
+  margin-bottom: 10px;
 }
 
 header .Nav ul li a {
@@ -60,9 +64,12 @@ header .Nav ul li a {
   text-decoration: none;
   font-size: 1em;
   transition: color 0.3s;
+  cursor: pointer;
 }
 
 header .Nav ul li a:hover {
+  background-color: #1D4450;
+
   color: #cadbda;
 }
 
@@ -338,14 +345,14 @@ text-align: left;
 
   .custom-audio-controls .time-display {
     margin: 0;
-    text-align: center;
+    text-align: left;
     font-size: 1em; /* Slightly larger for better readability */
   }
 
   /* Playback Controls */
   .custom-audio-controls button {
-    width: 40px; /* Larger touch targets */
-    height: 40px;
+    width: 50px; /* Larger touch targets */
+    height: 50px;
     margin: 0 5px;
   }
 
