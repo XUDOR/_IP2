@@ -23,16 +23,12 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #083D5E;
-  
   color: #cadbda;
   padding: 10px;
   margin: 5px;
-  
 }
 
 header .Logo {
-  /* Remove the fixed width */
-  /* width: 100px; */
   padding: 5px;
   margin: 5px;
 }
@@ -42,9 +38,6 @@ header .Logo img {
   height: auto;
   display: block;
 }
-
-
-
 
 header .Nav ul {
   list-style: none;
@@ -74,7 +67,6 @@ header .Nav ul li a:hover {
   color: #cadbda;
 }
 
-
 /* Main Content Styles */
 main {
   display: flex;
@@ -82,8 +74,8 @@ main {
   padding: 20px;
 }
 
-/* Album Art Container */
 .album-art {
+  flex: 0 0 75%; /* Adjusted width to 65% */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-rows: auto;
@@ -92,10 +84,6 @@ main {
   max-width: 100%;
   overflow-x: hidden;
 }
-
-
-
-/* Add this to your CSS file */
 
 /* Album Art Images */
 .album-art img {
@@ -106,24 +94,22 @@ main {
   transition: all 0.6s ease-in-out;
 }
 
-
 /* Enlarged Image */
 .album-art img.enlarged {
   grid-column: 1 / -1; /* Span all columns */
   width: 100%;
   height: auto;
-  max-height: 80vh; /* Adjust as needed */
+  /* max-height: 80vh; */ /* Removed to ensure full image is visible */
   justify-self: center;
 }
 
 .sidebar {
-  flex: 1;
+  flex: 0 0 25%; /* Adjusted width to 35% (30% wider) */
   margin-left: 20px;
   padding: 10px;
   background-color: #083D5E;
   border-left: 1px solid #cadbda;
-  font-size: .8em;
-  
+  font-size: 0.8em;
 }
 
 .sidebar .albumDetails {
@@ -140,7 +126,7 @@ main {
 
 .sidebar .albumDescription {
   color: #8ab7ce;
-  margin-bottom: .8em;
+  margin-bottom: 0.8em;
 }
 
 .sidebar .songListContainer {
@@ -181,7 +167,7 @@ footer {
 
 .footTag {
   padding: 10px;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 /* Custom Audio Player Styles */
@@ -202,8 +188,7 @@ footer {
 }
 
 .PlayerSong {
-text-align: left;
-
+  text-align: left;
 }
 
 /* Custom Audio Controls */
@@ -331,7 +316,21 @@ text-align: left;
     padding: 10px; /* Reduced padding for mobile */
   }
 
+  .album-art {
+    flex: none;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .album-art img {
+    width: 100%;
+    height: auto;
+    margin: 5px;
+  }
+
   .sidebar {
+    flex: none;
+    width: 100%;
     margin-left: 0;
     margin-top: 20px;
     padding: 15px;
@@ -382,18 +381,4 @@ text-align: left;
     width: 80%; /* Take up most of the width */
     margin: 10px 0;
   }
-
-  /* Album Art Grid Adjustments */
-  .album-art {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  }
-
-  .album-art img {
-    width: 150px; /* Slightly smaller on mobile */
-    height: 150px;
-    margin: 5px;
-  }
 }
-
-
-
