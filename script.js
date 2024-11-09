@@ -719,11 +719,29 @@ function loadAlbumArt() {
     albumArtContainer.appendChild(img);
 
     // Add event listener for clicks
-    img.addEventListener('click', () => {
+    img.addEventListener('click', (event) => {
+      const clickedImg = event.currentTarget;
+
+      // Toggle 'enlarged' class
+      if (clickedImg.classList.contains('enlarged')) {
+        clickedImg.classList.remove('enlarged');
+      } else {
+        // Remove 'enlarged' class from all images
+        document.querySelectorAll('.album-art img').forEach(image => {
+          image.classList.remove('enlarged');
+        });
+
+        // Add 'enlarged' class to the clicked image
+        clickedImg.classList.add('enlarged');
+      }
+
+      // Display album details
       displayAlbumDetails(album.id);
     });
   });
 }
+
+
 
 // Function to display album details when an album is clicked
 function displayAlbumDetails(albumId) {
@@ -779,7 +797,7 @@ function displayAlbumDetails(albumId) {
   }
 }
 
-
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
 
 // Function to play a song
 function playSong(songId) {
