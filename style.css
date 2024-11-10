@@ -103,18 +103,24 @@ main {
   justify-self: center;
 }
 
+
 /* Sidebar Styles */
 .sidebar {
-  flex: 0 0 25%;
-  margin-left: 20px;
-  padding: 10px;
+  display: none; /* Initially hidden */
+  flex: 0 0 0%; /* Start with 0% width */
+  transition: width 0.5s ease-in-out; /* Smooth transition */
+  /* Retain other styles */
   background-color: #083D5E;
   border-left: 1px solid #cadbda;
   font-size: 0.8em;
   position: sticky;
   top: 0;
   height: fit-content;
+  overflow: hidden;
+  margin: 5px;
 }
+
+
 
 /* Styles for details and summary in the sidebar */
 .sidebar-details {
@@ -147,6 +153,7 @@ main {
 
 /* Sidebar Inner Content Styles */
 .sidebar .albumDetails {
+  margin-left: 5px;
   margin-bottom: 20px;
 }
 
@@ -172,6 +179,7 @@ main {
 }
 
 .sidebar .songList li {
+  margin: 3px;
   padding: 8px;
   cursor: pointer;
   border-bottom: 1px solid #e0e0e0;
