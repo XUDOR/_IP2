@@ -329,6 +329,11 @@ footer {
 }
 
 
+.custom-audio-controls button.loop {
+  background-image: url('assets/CASS-REPEAT_BLUE.svg');
+  border: 1px solid #083D5E;
+}
+
 
 .custom-audio-controls .progress-container {
   flex: 1;

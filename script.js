@@ -829,6 +829,7 @@ function displayAlbumDetails(albumId) {
 function playSong(songId, albumId) {
   const song = data.songs[songId];
   const album = data.albums[albumId];
+  let isLooping = false; // Loop state
 
   if (song && album) {
     const playerContainer = document.querySelector('.player');
@@ -853,20 +854,19 @@ function playSong(songId, albumId) {
     // Play button
     const playBtn = document.createElement('button');
     playBtn.id = 'play';
-    playBtn.classList.add('play'); // Add the 'play' class
+    playBtn.classList.add('play');
     controls.appendChild(playBtn);
 
     // Pause button
     const pauseBtn = document.createElement('button');
     pauseBtn.id = 'pause';
-    pauseBtn.classList.add('pause'); // Add the 'pause' class to the pause button
+    pauseBtn.classList.add('pause');
     controls.appendChild(pauseBtn);
-
 
     // Stop button
     const stopBtn = document.createElement('button');
     stopBtn.id = 'stop';
-    stopBtn.classList.add('stop'); // Add the 'stop' class 
+    stopBtn.classList.add('stop');
     controls.appendChild(stopBtn);
 
     // Back 30 seconds button
@@ -881,12 +881,11 @@ function playSong(songId, albumId) {
     forwardBtn.classList.add('forward30');
     controls.appendChild(forwardBtn);
 
-
-   // Previous track button
-   const prevTrackBtn = document.createElement('button');
-   prevTrackBtn.id = 'prev-track';
-   prevTrackBtn.classList.add('back');
-   controls.appendChild(prevTrackBtn);
+    // Previous track button
+    const prevTrackBtn = document.createElement('button');
+    prevTrackBtn.id = 'prev-track';
+    prevTrackBtn.classList.add('back');
+    controls.appendChild(prevTrackBtn);
 
     // Next track button
     const nextTrackBtn = document.createElement('button');
@@ -894,24 +893,28 @@ function playSong(songId, albumId) {
     nextTrackBtn.classList.add('next');
     controls.appendChild(nextTrackBtn);
 
+    // Loop button
+    const loopBtn = document.createElement('button');
+    loopBtn.id = 'loop';
+    loopBtn.classList.add('loop');
+    controls.appendChild(loopBtn);
+
     // Volume control slider
     const volumeControl = document.createElement('div');
     volumeControl.classList.add('volume-control');
-
     const volumeSlider = document.createElement('input');
     volumeSlider.type = 'range';
     volumeSlider.id = 'volume-slider';
     volumeSlider.min = 0;
     volumeSlider.max = 1;
     volumeSlider.step = 0.01;
-    volumeSlider.value = 1; // Default to max volume
+    volumeSlider.value = 1;
     volumeControl.appendChild(volumeSlider);
-
     controls.appendChild(volumeControl);
 
     playerContainer.appendChild(controls);
 
-    // Event listeners for the controls
+    // Event listeners for controls
 
     // Play functionality
     playBtn.addEventListener('click', () => {
@@ -945,26 +948,52 @@ function playSong(songId, albumId) {
 
     // Next track functionality
     nextTrackBtn.addEventListener('click', () => {
-      const currentIndex = album.songs.findIndex(s => s.id === songId);
-      if (currentIndex + 1 < album.songs.length) {
-        const nextSong = album.songs[currentIndex + 1];
-        playSong(nextSong.id, albumId);
-      }
+      playNextTrack(songId, album);
     });
 
     // Previous track functionality
     prevTrackBtn.addEventListener('click', () => {
-      const currentIndex = album.songs.findIndex(s => s.id === songId);
-      if (currentIndex > 0) {
-        const prevSong = album.songs[currentIndex - 1];
-        playSong(prevSong.id, albumId);
-      }
+      playPreviousTrack(songId, album);
+    });
+
+    // Loop functionality
+    loopBtn.addEventListener('click', () => {
+      isLooping = !isLooping; // Toggle loop state
+      loopBtn.classList.toggle('active'); // Add class for styling the active state
     });
 
     // Volume slider functionality
     volumeSlider.addEventListener('input', () => {
       audio.volume = volumeSlider.value;
     });
+
+    // Automatically play the next song or loop the current song when audio ends
+    audio.addEventListener('ended', () => {
+      if (isLooping) {
+        audio.currentTime = 0;
+        audio.play();
+      } else {
+        playNextTrack(songId, album);
+      }
+    });
+
+    // Play the next song in the album
+    function playNextTrack(currentSongId, currentAlbum) {
+      const currentIndex = currentAlbum.songs.findIndex(s => s.id === currentSongId);
+      if (currentIndex + 1 < currentAlbum.songs.length) {
+        const nextSong = currentAlbum.songs[currentIndex + 1];
+        playSong(nextSong.id, albumId);
+      }
+    }
+
+    // Play the previous song in the album
+    function playPreviousTrack(currentSongId, currentAlbum) {
+      const currentIndex = currentAlbum.songs.findIndex(s => s.id === currentSongId);
+      if (currentIndex > 0) {
+        const prevSong = currentAlbum.songs[currentIndex - 1];
+        playSong(prevSong.id, albumId);
+      }
+    }
 
     // Progress bar and time display setup
     const progressContainer = document.createElement('div');
@@ -988,14 +1017,6 @@ function playSong(songId, albumId) {
     duration.textContent = '0:00';
     timeDisplay.appendChild(duration);
     controls.appendChild(timeDisplay);
-
-    playerContainer.appendChild(controls);
-
-
-
-
-
-
 
     // Update progress bar and time display
     audio.addEventListener('timeupdate', () => {
@@ -1035,4 +1056,5 @@ function playSong(songId, albumId) {
 
 // Call the function on page load
 window.onload = loadAlbumArt;
+
 
