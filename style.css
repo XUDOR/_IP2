@@ -15,7 +15,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
-  padding-bottom: 150px; /* Adjust based on footer height */
+  padding-bottom: 150px;
+  /* Adjust based on footer height */
 }
 
 /* Header Styles */
@@ -35,7 +36,8 @@ header .Logo {
 }
 
 header .Logo img {
-  width: 200px; /* Set the desired width */
+  width: 200px;
+  /* Set the desired width */
   height: auto;
   display: block;
 }
@@ -97,7 +99,8 @@ main {
 
 /* Enlarged Image */
 .album-art img.enlarged {
-  grid-column: 1 / -1; /* Span all columns */
+  grid-column: 1 / -1;
+  /* Span all columns */
   width: 100%;
   height: auto;
   justify-self: center;
@@ -106,9 +109,12 @@ main {
 
 /* Sidebar Styles */
 .sidebar {
-  display: none; /* Initially hidden */
-  flex: 0 0 0%; /* Start with 0% width */
-  transition: width 0.5s ease-in-out; /* Smooth transition */
+  display: none;
+  /* Initially hidden */
+  flex: 0 0 0%;
+  /* Start with 0% width */
+  transition: width 0.5s ease-in-out;
+  /* Smooth transition */
   /* Retain other styles */
   background-color: #083D5E;
   border-left: 1px solid #cadbda;
@@ -134,7 +140,7 @@ main {
   padding: 5px;
   background-color: #2b7f8c;
   color: #cadbda;
-  
+
 }
 
 /* Keep default disclosure triangle */
@@ -265,7 +271,7 @@ footer {
   padding: 10px;
   border-radius: 8px;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .custom-audio-controls button {
@@ -289,19 +295,40 @@ footer {
 /* Replace the paths below with your actual icon paths */
 .custom-audio-controls button.play {
   background-image: url('assets/CASS-PLAY-v2.svg');
+  border: 1px solid #083D5E;
 }
 
 .custom-audio-controls button.pause {
   background-image: url('assets/CASS-PAUSE.svg');
+  border: 1px solid #083D5E;
 }
 
-.custom-audio-controls .volume-control button.volume {
-  background-image: url('assets/volume.png');
+.custom-audio-controls button.stop {
+  background-image: url('assets/CASS-STOP.svg');
+  border: 1px solid #083D5E;
 }
 
-.custom-audio-controls .volume-control button.muted {
-  background-image: url('assets/mute.png');
+.custom-audio-controls button.forward30 {
+  background-image: url('assets/CASS-fwd30_BLUE.svg');
+  border: 1px solid #083D5E;
 }
+
+.custom-audio-controls button.back30 {
+  background-image: url('assets/CASS-bkwd30_BLUE.svg');
+  border: 1px solid #083D5E;
+}
+
+.custom-audio-controls button.next {
+  background-image: url('assets/CASS-FWD_BLUE-5.svg');
+  border: 1px solid #083D5E;
+}
+
+.custom-audio-controls button.back {
+  background-image: url('assets/CASS-BACK_BLUE-5.svg');
+  border: 1px solid #083D5E;
+}
+
+
 
 .custom-audio-controls .progress-container {
   flex: 1;
@@ -330,6 +357,7 @@ footer {
 .custom-audio-controls .volume-control {
   display: flex;
   align-items: center;
+  margin-right: 10px;
 }
 
 .custom-audio-controls .volume-control input[type="range"] {
@@ -376,10 +404,12 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
   /* Layout Containers */
   main {
     flex-direction: column;
-    padding: 10px; /* Reduced padding for mobile */
+    padding: 10px;
+    /* Reduced padding for mobile */
   }
 
   .album-art {
@@ -400,46 +430,66 @@ footer {
     margin-left: 0;
     margin-top: 20px;
     padding: 15px;
-    position: static; /* Remove sticky positioning on mobile */
+    position: static;
+    /* Remove sticky positioning on mobile */
   }
 
   /* Footer Adjustments */
   footer {
-    position: static; /* Remove fixed positioning on mobile */
+    position: static;
+    /* Remove fixed positioning on mobile */
   }
 
   .foot-cont {
     flex-direction: column;
-    gap: 10px; /* Add space between stacked items */
+    gap: 10px;
+    /* Add space between stacked items */
     padding: 15px;
   }
 
-  /* Audio Player Mobile Styles */
+  /* Audio Player Grid Styles */
   .custom-audio-controls {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 15px; /* Consistent spacing between elements */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    /* Responsive grid for square icons */
+    gap: 10px;
+    /* Spacing between grid items */
     padding: 15px;
+    align-items: center;
+    justify-items: center;
+    /* Centers each item within its cell */
+  }
+
+  /* Button Styles */
+  .custom-audio-controls button {
+    width: 50px;
+    /* Square dimensions for icons */
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    /* Optional: for no background color */
   }
 
   .custom-audio-controls .progress-container {
     width: 100%;
     margin: 0;
-    height: 20px; /* Slightly larger touch target */
+    height: 20px;
+    /* Slightly larger touch target */
   }
 
   .custom-audio-controls .time-display {
     margin: 0;
     text-align: left;
-    font-size: 1em; /* Slightly larger for better readability */
+    font-size: 1em;
+    /* Slightly larger for better readability */
   }
 
-  /* Playback Controls */
-  .custom-audio-controls button {
-    width: 50px; /* Larger touch targets */
-    height: 50px;
-    margin: 0 5px;
-  }
+
 
   /* Volume Controls */
   .custom-audio-controls .volume-control {
@@ -449,7 +499,8 @@ footer {
   }
 
   .custom-audio-controls .volume-control input[type="range"] {
-    width: 80%; /* Take up most of the width */
+    width: 80%;
+    /* Take up most of the width */
     margin: 10px 0;
   }
 }

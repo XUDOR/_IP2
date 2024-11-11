@@ -822,194 +822,217 @@ function displayAlbumDetails(albumId) {
   }
 }
 
+//===============================================================================================
+//===============================================================================================
 
 
-  //===============================================================================================
-  // Function to play a song
-  function playSong(songId, albumId) {
-    const song = data.songs[songId];
-    const album = data.albums[albumId];
+function playSong(songId, albumId) {
+  const song = data.songs[songId];
+  const album = data.albums[albumId];
 
-    if (song && album) {
-      // Update the player in the footer with the song details
-      const playerContainer = document.querySelector('.player');
-      playerContainer.innerHTML = ''; // Clear previous content
+  if (song && album) {
+    const playerContainer = document.querySelector('.player');
+    playerContainer.innerHTML = ''; // Clear previous content
 
-      // Now Playing Title
-      const nowPlaying = document.createElement('p');
-      nowPlaying.textContent = `${song.name}`;
-      nowPlaying.classList.add('PlayerSong');
-      playerContainer.appendChild(nowPlaying);
+    // Now Playing Title
+    const nowPlaying = document.createElement('p');
+    nowPlaying.textContent = `${song.name}`;
+    nowPlaying.classList.add('PlayerSong');
+    playerContainer.appendChild(nowPlaying);
 
-      // Create audio element without controls
-      const audio = document.createElement('audio');
-      audio.src = song.audio_url;
-      audio.id = 'audio-player';
-      playerContainer.appendChild(audio);
+    // Create audio element
+    const audio = document.createElement('audio');
+    audio.src = song.audio_url;
+    audio.id = 'audio-player';
+    playerContainer.appendChild(audio);
 
-      // Create custom controls container
-      const controls = document.createElement('div');
-      controls.classList.add('custom-audio-controls');
+    // Custom controls container
+    const controls = document.createElement('div');
+    controls.classList.add('custom-audio-controls');
 
-      // Play/Pause button
-      const playPauseBtn = document.createElement('button');
-      playPauseBtn.id = 'play-pause';
-      playPauseBtn.classList.add('play'); // Initial state is 'play'
-      controls.appendChild(playPauseBtn);
+    // Play button
+    const playBtn = document.createElement('button');
+    playBtn.id = 'play';
+    playBtn.classList.add('play'); // Add the 'play' class
+    controls.appendChild(playBtn);
 
-      // Progress bar container
-      const progressContainer = document.createElement('div');
-      progressContainer.classList.add('progress-container');
+    // Pause button
+    const pauseBtn = document.createElement('button');
+    pauseBtn.id = 'pause';
+    pauseBtn.classList.add('pause'); // Add the 'pause' class to the pause button
+    controls.appendChild(pauseBtn);
 
-      // Progress bar
-      const progressBar = document.createElement('div');
-      progressBar.classList.add('progress-bar');
-      progressContainer.appendChild(progressBar);
 
-      controls.appendChild(progressContainer);
+    // Stop button
+    const stopBtn = document.createElement('button');
+    stopBtn.id = 'stop';
+    stopBtn.classList.add('stop'); // Add the 'stop' class 
+    controls.appendChild(stopBtn);
 
-      // Time display
-      const timeDisplay = document.createElement('div');
-      timeDisplay.classList.add('time-display');
+    // Back 30 seconds button
+    const backBtn = document.createElement('button');
+    backBtn.id = 'back-30';
+    backBtn.classList.add('back30');
+    controls.appendChild(backBtn);
 
-      const currentTime = document.createElement('span');
-      currentTime.id = 'current-time';
-      currentTime.textContent = '0:00';
-      timeDisplay.appendChild(currentTime);
+    // Forward 30 seconds button
+    const forwardBtn = document.createElement('button');
+    forwardBtn.id = 'forward-30';
+    forwardBtn.classList.add('forward30');
+    controls.appendChild(forwardBtn);
 
-      const separator = document.createElement('span');
-      separator.textContent = ' / ';
-      timeDisplay.appendChild(separator);
 
-      const duration = document.createElement('span');
-      duration.id = 'duration';
-      duration.textContent = '0:00';
-      timeDisplay.appendChild(duration);
+   // Previous track button
+   const prevTrackBtn = document.createElement('button');
+   prevTrackBtn.id = 'prev-track';
+   prevTrackBtn.classList.add('back');
+   controls.appendChild(prevTrackBtn);
 
-      controls.appendChild(timeDisplay);
+    // Next track button
+    const nextTrackBtn = document.createElement('button');
+    nextTrackBtn.id = 'next-track';
+    nextTrackBtn.classList.add('next');
+    controls.appendChild(nextTrackBtn);
 
-      // Volume control
-      const volumeControl = document.createElement('div');
-      volumeControl.classList.add('volume-control');
+    // Volume control slider
+    const volumeControl = document.createElement('div');
+    volumeControl.classList.add('volume-control');
 
-      const volumeIcon = document.createElement('button');
-      volumeIcon.id = 'mute-unmute';
-      volumeIcon.classList.add('volume'); // Initial state is 'volume'
-      volumeControl.appendChild(volumeIcon);
+    const volumeSlider = document.createElement('input');
+    volumeSlider.type = 'range';
+    volumeSlider.id = 'volume-slider';
+    volumeSlider.min = 0;
+    volumeSlider.max = 1;
+    volumeSlider.step = 0.01;
+    volumeSlider.value = 1; // Default to max volume
+    volumeControl.appendChild(volumeSlider);
 
-      const volumeSlider = document.createElement('input');
-      volumeSlider.type = 'range';
-      volumeSlider.id = 'volume-slider';
-      volumeSlider.min = 0;
-      volumeSlider.max = 1;
-      volumeSlider.step = 0.01;
-      volumeSlider.value = 1;
-      volumeControl.appendChild(volumeSlider);
+    controls.appendChild(volumeControl);
 
-      controls.appendChild(volumeControl);
+    playerContainer.appendChild(controls);
 
-      playerContainer.appendChild(controls);
+    // Event listeners for the controls
 
-      // Event listeners
-
-      // Play/Pause functionality
-      playPauseBtn.addEventListener('click', () => {
-        if (audio.paused) {
-          audio.play();
-          playPauseBtn.classList.remove('play');
-          playPauseBtn.classList.add('pause');
-        } else {
-          audio.pause();
-          playPauseBtn.classList.remove('pause');
-          playPauseBtn.classList.add('play');
-        }
-      });
-
-      // Update progress bar and time display
-      audio.addEventListener('timeupdate', () => {
-        const progressPercent = (audio.currentTime / audio.duration) * 100;
-        progressBar.style.width = `${progressPercent}%`;
-        currentTime.textContent = formatTime(audio.currentTime);
-        duration.textContent = formatTime(audio.duration);
-      });
-
-      // Seek functionality
-      progressContainer.addEventListener('click', (e) => {
-        const rect = progressContainer.getBoundingClientRect();
-        const offsetX = e.clientX - rect.left;
-        const totalWidth = rect.width;
-        const clickPositionRatio = offsetX / totalWidth;
-        audio.currentTime = clickPositionRatio * audio.duration;
-      });
-
-      // Mute/Unmute functionality
-      volumeIcon.addEventListener('click', () => {
-        audio.muted = !audio.muted;
-        if (audio.muted) {
-          volumeIcon.classList.remove('volume');
-          volumeIcon.classList.add('muted');
-        } else {
-          volumeIcon.classList.remove('muted');
-          volumeIcon.classList.add('volume');
-        }
-      });
-
-      // Volume slider functionality
-      volumeSlider.addEventListener('input', () => {
-        audio.volume = volumeSlider.value;
-        if (audio.volume === 0) {
-          audio.muted = true;
-          volumeIcon.classList.remove('volume');
-          volumeIcon.classList.add('muted');
-        } else {
-          audio.muted = false;
-          volumeIcon.classList.remove('muted');
-          volumeIcon.classList.add('volume');
-        }
-      });
-
-      // Helper function to format time
-      function formatTime(seconds) {
-        if (isNaN(seconds)) {
-          return '0:00';
-        }
-        const minutes = Math.floor(seconds / 60);
-        const secs = Math.floor(seconds % 60);
-        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+    // Play functionality
+    playBtn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
       }
+    });
 
-      // Set initial duration when metadata is loaded
-      audio.addEventListener('loadedmetadata', () => {
-        duration.textContent = formatTime(audio.duration);
-      });
+    // Pause functionality
+    pauseBtn.addEventListener('click', () => {
+      if (!audio.paused) {
+        audio.pause();
+      }
+    });
 
-      // Play the audio automatically
-      audio.play().catch(error => {
-        // Autoplay might be blocked; handle errors here
-        playPauseBtn.classList.remove('pause');
-        playPauseBtn.classList.add('play');
-      });
+    // Stop functionality
+    stopBtn.addEventListener('click', () => {
+      audio.pause();
+      audio.currentTime = 0;
+    });
 
-      // Event listener for when the audio ends
-      audio.addEventListener('ended', () => {
-        // Find the current song's index in the album's song list
-        const currentIndex = album.songs.findIndex(s => s.id === songId);
+    // Forward 30 seconds
+    forwardBtn.addEventListener('click', () => {
+      audio.currentTime = Math.min(audio.currentTime + 30, audio.duration);
+    });
 
-        // Check if there is a next song
-        if (currentIndex + 1 < album.songs.length) {
-          const nextSong = album.songs[currentIndex + 1];
-          playSong(nextSong.id, albumId); // Play the next song
-        } else {
-          // Optionally, you can reset the player or stop playback
-          // For example, reset progress bar and play button
-          playPauseBtn.classList.remove('pause');
-          playPauseBtn.classList.add('play');
-          progressBar.style.width = '0%';
-          currentTime.textContent = '0:00';
-        }
-      });
+    // Back 30 seconds
+    backBtn.addEventListener('click', () => {
+      audio.currentTime = Math.max(audio.currentTime - 30, 0);
+    });
+
+    // Next track functionality
+    nextTrackBtn.addEventListener('click', () => {
+      const currentIndex = album.songs.findIndex(s => s.id === songId);
+      if (currentIndex + 1 < album.songs.length) {
+        const nextSong = album.songs[currentIndex + 1];
+        playSong(nextSong.id, albumId);
+      }
+    });
+
+    // Previous track functionality
+    prevTrackBtn.addEventListener('click', () => {
+      const currentIndex = album.songs.findIndex(s => s.id === songId);
+      if (currentIndex > 0) {
+        const prevSong = album.songs[currentIndex - 1];
+        playSong(prevSong.id, albumId);
+      }
+    });
+
+    // Volume slider functionality
+    volumeSlider.addEventListener('input', () => {
+      audio.volume = volumeSlider.value;
+    });
+
+    // Progress bar and time display setup
+    const progressContainer = document.createElement('div');
+    progressContainer.classList.add('progress-container');
+    const progressBar = document.createElement('div');
+    progressBar.classList.add('progress-bar');
+    progressContainer.appendChild(progressBar);
+    controls.appendChild(progressContainer);
+
+    const timeDisplay = document.createElement('div');
+    timeDisplay.classList.add('time-display');
+    const currentTime = document.createElement('span');
+    currentTime.id = 'current-time';
+    currentTime.textContent = '0:00';
+    timeDisplay.appendChild(currentTime);
+    const separator = document.createElement('span');
+    separator.textContent = ' / ';
+    timeDisplay.appendChild(separator);
+    const duration = document.createElement('span');
+    duration.id = 'duration';
+    duration.textContent = '0:00';
+    timeDisplay.appendChild(duration);
+    controls.appendChild(timeDisplay);
+
+    playerContainer.appendChild(controls);
+
+
+
+
+
+
+
+    // Update progress bar and time display
+    audio.addEventListener('timeupdate', () => {
+      const progressPercent = (audio.currentTime / audio.duration) * 100;
+      progressBar.style.width = `${progressPercent}%`;
+      currentTime.textContent = formatTime(audio.currentTime);
+      duration.textContent = formatTime(audio.duration);
+    });
+
+    // Seek functionality
+    progressContainer.addEventListener('click', (e) => {
+      const rect = progressContainer.getBoundingClientRect();
+      const offsetX = e.clientX - rect.left;
+      const clickPositionRatio = offsetX / rect.width;
+      audio.currentTime = clickPositionRatio * audio.duration;
+    });
+
+    // Helper function to format time
+    function formatTime(seconds) {
+      if (isNaN(seconds)) return '0:00';
+      const minutes = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60);
+      return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
     }
-  }
 
-  // Call the function on page load
-  window.onload = loadAlbumArt;
+    // Load metadata to set the initial duration
+    audio.addEventListener('loadedmetadata', () => {
+      duration.textContent = formatTime(audio.duration);
+    });
+
+    // Automatically play the audio on load
+    audio.play().catch(() => {
+      // Handle autoplay restrictions if needed
+    });
+  }
+}
+
+// Call the function on page load
+window.onload = loadAlbumArt;
+
