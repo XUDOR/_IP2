@@ -754,73 +754,84 @@ function loadAlbumArt() {
 // Function to display album details when an album is clicked
 function displayAlbumDetails(albumId) {
   const album = data.albums[albumId];
-  const sidebar = document.querySelector('.sidebar'); // Define sidebar at the start
+  const sidebar = document.querySelector('.sidebar');
 
   if (album) {
-    // Make sidebar visible and expand it to 25%
-    sidebar.style.display = 'block';
-    sidebar.style.flexBasis = '25%'; // Set sidebar width to 25% on click
+      sidebar.style.display = 'block';
+      sidebar.style.flexBasis = '25%';
 
-    // Select the sidebar content element and clear previous content
-    const sidebarContent = document.querySelector('.sidebar .sidebar-content');
-    sidebarContent.innerHTML = '';
+      const sidebarContent = document.querySelector('.sidebar .sidebar-content');
+      sidebarContent.innerHTML = '';
 
-    // Open the details element if it's closed
-    const sidebarDetails = document.querySelector('.sidebar-details');
-    sidebarDetails.open = true;
+      const albumDetails = document.createElement('div');
+      albumDetails.classList.add('albumDetails');
 
-    // Create a container for album details
-    const albumDetails = document.createElement('div');
-    albumDetails.classList.add('albumDetails');
+      const title = document.createElement('h2');
+      title.classList.add('albumName');
+      title.textContent = album.name;
+      albumDetails.appendChild(title);
 
-    // Create the title element
-    const title = document.createElement('h2');
-    title.classList.add('albumName');
-    title.textContent = album.name;
-    albumDetails.appendChild(title);
+      const description = document.createElement('p');
+      description.classList.add('albumDescription');
+      description.textContent = album.description;
+      albumDetails.appendChild(description);
 
-    // Create the description element
-    const description = document.createElement('p');
-    description.classList.add('albumDescription');
-    description.textContent = album.description;
-    albumDetails.appendChild(description);
+      // Add the albumDetails to sidebar content
+      sidebarContent.appendChild(albumDetails);
 
-    // Append the albumDetails container to the sidebar content
-    sidebarContent.appendChild(albumDetails);
+      // Inject the album info (catalogue # and release date)
+      const albumInfo = document.createElement('div');
+      albumInfo.classList.add('album-info');
+      
+      const catalogueNumber = document.createElement('div');
+      catalogueNumber.classList.add('catalogue-number');
+      catalogueNumber.textContent = `Catalogue #: ${album.catalogue}`;
+      albumInfo.appendChild(catalogueNumber);
 
-    // Create a container for the song list
-    const songListContainer = document.createElement('div');
-    songListContainer.classList.add('songListContainer');
+      const releaseDate = document.createElement('div');
+      releaseDate.classList.add('release-date');
+      releaseDate.textContent = `Release Date: ${album.release_date}`;
+      albumInfo.appendChild(releaseDate);
 
-    // Create the song list
-    const songList = document.createElement('ul');
-    songList.classList.add('songList');
+      // Append album-info to sidebar content
+      sidebarContent.appendChild(albumInfo);
 
-    album.songs.forEach(song => {
-      const songItem = document.createElement('li');
-      songItem.textContent = `${song.track_id}. ${song.name} (${song.duration})`;
-      songList.appendChild(songItem);
+      
+      // Create a container for the song list
+      const songListContainer = document.createElement('div');
+      songListContainer.classList.add('songListContainer');
 
-      // Add click event to play song
-      songItem.addEventListener('click', () => {
-        playSong(song.id, albumId);
+      // Create the song list
+      const songList = document.createElement('ul');
+      songList.classList.add('songList');
+
+      // Iterate through each song in the album and create a list item
+      album.songs.forEach(song => {
+          const songItem = document.createElement('li');
+          songItem.textContent = `${song.track_id}. ${song.name} (${song.duration})`;
+          songList.appendChild(songItem);
+
+          // Add click event to play song
+          songItem.addEventListener('click', () => {
+              playSong(song.id, albumId);
+          });
       });
-    });
 
-    // Append the song list to the songListContainer
-    songListContainer.appendChild(songList);
+      // Append the song list to the songListContainer
+      songListContainer.appendChild(songList);
 
-    // Append the songListContainer to the sidebar content
-    sidebarContent.appendChild(songListContainer);
-
+      // Append the songListContainer to the sidebar content
+      sidebarContent.appendChild(songListContainer);
   } else {
-    // Collapse and hide the sidebar if albumId is invalid
-    sidebar.style.flexBasis = '0%';
-    setTimeout(() => {
-      sidebar.style.display = 'none'; // Hide sidebar after transition
-    }, 500); // Delay to match the transition time for smooth effect
+      // Collapse and hide the sidebar if albumId is invalid
+      sidebar.style.flexBasis = '0%';
+      setTimeout(() => {
+          sidebar.style.display = 'none'; // Hide sidebar after transition
+      }, 500); // Delay to match the transition time for smooth effect
   }
 }
+
+
 
 //===============================================================================================
 //===============================================================================================

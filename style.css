@@ -106,6 +106,21 @@ main {
   justify-self: center;
 }
 
+.album-info {
+  margin: 10px 0;
+  padding: 5px;
+  border-top: 1px solid #cadbda;
+}
+
+.catalogue-number, .release-date {
+  font-size: 0.9em;
+  color: #cadbda;
+  margin-bottom: 5px;
+}
+
+
+
+
 
 /* Sidebar Styles */
 .sidebar {
@@ -146,7 +161,7 @@ main {
 /* Keep default disclosure triangle */
 .sidebar-details summary::-webkit-details-marker {
   /* Default styling */
-}
+} 
 
 .sidebar-details summary::marker {
   /* Default styling */
