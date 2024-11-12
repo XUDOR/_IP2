@@ -121,8 +121,8 @@ const album1 = new Album(
   '00040101',
   'Charlotta',
   'https://storage.googleapis.com/ip-public-bucket1/Charlotta/1_CHARLOTTA.png',
-  '2005-05-01',
-  '2010-10-03',
+  'May 1, 2005',
+  'October 3, 2010',
   1,
   'All Sound & Composition: Roderick Shoolbraid. Album Cover Art, Photography & Design: Roderick Shoolbraid. All Rights Reserved.',
   'The debut ambient electronic album by Roderick Shoolbraid, written in a span from 2003 to 2005. Released in 2010. A soundtrack for a dream, and a film that never was.',
@@ -149,8 +149,8 @@ const album2 = new Album(
   '00040102',
   'Objects & Particles',
   'https://storage.googleapis.com/ip-public-bucket1/Objects-and-Particles/2_OBJECTS-PARTICLES.png',
-  '2006-03-01',
-  '2010-10-10',
+  'March 1, 2006',
+  'October 10, 2010',
   1,
   'All Sound & Composition: Roderick Shoolbraid. Album Cover Art, Photography & Design: Roderick Shoolbraid. All Rights Reserved',
   'Between "Charlotta" & "Glass City of Us" (2004-6), this darker album explored minimal ambient music. It used noise, line hum, record skips, and drone reverbs. Inspired by the idea that objects in math, physics, & chemistry have their own music, if we listen closely.',
@@ -175,8 +175,8 @@ const album3 = new Album(
   '00040103',
   'Glass City of Us',
   'https://storage.googleapis.com/ip-public-bucket1/Glass-City-of-Us/3_GLASS-CITY-OF-US.png',
-  '2005-04-01',
-  '2010-10-06',
+  'April 1, 2005',
+  'October 6, 2010',
   1,
   'All Sound & Composition: Roderick Shoolbraid. Album Cover Art, Photography & Design: Roderick Shoolbraid. All Rights Reserved.',
   'This album became the sequel to "Charlotta", composed and engineered over a 2 year period from 2003-2005, finished in the middle of 2005. The concept of "The City" emerged through the rough romantic plot of two people in a massive futuristic city, that seems dwarfed by the sentiments by them both.',
@@ -201,8 +201,8 @@ const album4 = new Album(
   '00040104',
   'New Domes of Earth',
   'https://storage.googleapis.com/ip-public-bucket1/New-Domes-of-Earth/4_NEW-DOMES.png',
-  '2005-05-15',
-  '2010-10-19',
+  'May 15, 2005',
+  'October 19, 2010',
   1,
   'All Sound & Composition: Roderick Shoolbraid. Album Cover Art, Photography & Design: Roderick Shoolbraid. All Rights Reserved.',
   'Music for visions of the future.',
@@ -785,12 +785,17 @@ function displayAlbumDetails(albumId) {
       
       const catalogueNumber = document.createElement('div');
       catalogueNumber.classList.add('catalogue-number');
-      catalogueNumber.textContent = `Catalogue #: ${album.catalogue}`;
+      catalogueNumber.textContent = ` ${album.catalogue}`;
       albumInfo.appendChild(catalogueNumber);
+
+      const productionDate = document.createElement('div');
+      productionDate.classList.add('production-date');
+      productionDate.textContent = `${album.production_date}`;
+      albumInfo.appendChild(productionDate);
 
       const releaseDate = document.createElement('div');
       releaseDate.classList.add('release-date');
-      releaseDate.textContent = `Release Date: ${album.release_date}`;
+      releaseDate.textContent = `${album.release_date}`;
       albumInfo.appendChild(releaseDate);
 
       // Append album-info to sidebar content
