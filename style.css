@@ -234,6 +234,13 @@ main {
   border-bottom: none;
 }
 
+.song-duration {
+  color: #8ab7ce; /* Replace with your desired color */
+  margin-left: 10px; /* Optional: adds some spacing */
+}
+
+
+
 /* Footer Styles */
 footer {
   background-color: #2b7f8c;
