@@ -152,7 +152,7 @@ const album2 = new Album(
   'March 1, 2006',
   'October 10, 2010',
   1,
-  'All Sound & Composition: Roderick Shoolbraid.<br>Album Cover Art, Photography & Design: Roderick Shoolbraid.<br> All Rights Reserved.',
+ 'All Sound & Composition: Roderick Shoolbraid.<br>Cover Art, Photography & Design: Roderick Shoolbraid.<br> &copy;All Rights Reserved.',
   'Between "Charlotta" & "Glass City of Us" (2004-6), this darker album explored minimal ambient music. It used noise, line hum, record skips, and drone reverbs. Inspired by the idea that objects in math, physics, & chemistry have their own music, if we listen closely.',
   6
 );
@@ -178,7 +178,7 @@ const album3 = new Album(
   'April 1, 2005',
   'October 6, 2010',
   1,
-  'All Sound & Composition: Roderick Shoolbraid.<br>Album Cover Art, Photography & Design: Roderick Shoolbraid.<br> All Rights Reserved.',
+ 'All Sound & Composition: Roderick Shoolbraid.<br>Cover Art, Photography & Design: Roderick Shoolbraid.<br> &copy;All Rights Reserved.',
   'This album became the sequel to "Charlotta", composed and engineered over a 2 year period from 2003-2005, finished in the middle of 2005. The concept of "The City" emerged through the rough romantic plot of two people in a massive futuristic city, that seems dwarfed by the sentiments by them both.',
   6
 );
@@ -204,7 +204,7 @@ const album4 = new Album(
   'May 15, 2005',
   'October 19, 2010',
   1,
-  'All Sound & Composition: Roderick Shoolbraid.<br>Album Cover Art, Photography & Design: Roderick Shoolbraid.<br> All Rights Reserved.',
+  'All Sound & Composition: Roderick Shoolbraid.<br>Cover Art, Photography & Design: Roderick Shoolbraid.<br> &copy;All Rights Reserved.',
   'Music for visions of the future.',
   6
 );
@@ -230,7 +230,7 @@ const album5 = new Album(
   'March 15, 2022',
   'March 22, 2022',
   1,
-  'All Sound and Instruments: Roderick Shoolbraid. <br>Painting & Album Cover Design: Roderick Shoolbraid. <br>All Rights Reserved.',
+  'All Sound and Instruments: Roderick Shoolbraid. <br>Painting & Album Cover Design: Roderick Shoolbraid. <br>&copy;All Rights Reserved.',
   'An open letter of love and admiration for the natural world.',
   9
 );
@@ -259,7 +259,7 @@ const album6 = new Album(
   'February 15, 2022',
   'March 25, 2022',
   1,
-  'All Sound & Composition: Roderick Shoolbraid. Album Cover design: Roderick Shoolbraid. All Rights Reserved.',
+  'All Sound & Composition: Roderick Shoolbraid.<br>Cover Art, Photography & Design: Roderick Shoolbraid.<br> &copy;All Rights Reserved.',
   'Music for the stars and beyond. Started in late 2021, completed in 2022.',
   7
 );
@@ -286,7 +286,7 @@ const album7 = new Album(
   'May 15, 2022',
   'June 14, 2022',
   1,
-  'All Sound, production and Composition: Roderick Shoolbraid Album Cover design: Roderick Shoolbraid All Rights Reserved.',
+  'All Sound, production and Composition: Roderick Shoolbraid <br> Cover design: Roderick Shoolbraid <br> &copy;All Rights Reserved.',
   'Lines drawn by field recordings, manipulated and accompanied by guitars & bass. Coloured in by synths and reverb to show a space of the beauty of geometry. Sound sources from: 1996-7, 2003-15. Compiled and finished in summer 2022.',
   9
 );
