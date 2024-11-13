@@ -152,7 +152,7 @@ const album2 = new Album(
   'March 1, 2006',
   'October 10, 2010',
   1,
- 'All Sound & Composition: Roderick Shoolbraid.<br>Cover Art, Photography & Design: Roderick Shoolbraid.<br> &copy;All Rights Reserved.',
+  'All Sound & Composition: Roderick Shoolbraid.<br>Cover Art, Photography & Design: Roderick Shoolbraid.<br> &copy;All Rights Reserved.',
   'Between "Charlotta" & "Glass City of Us" (2004-6), this darker album explored minimal ambient music. It used noise, line hum, record skips, and drone reverbs. Inspired by the idea that objects in math, physics, & chemistry have their own music, if we listen closely.',
   6
 );
@@ -178,7 +178,7 @@ const album3 = new Album(
   'April 1, 2005',
   'October 6, 2010',
   1,
- 'All Sound & Composition: Roderick Shoolbraid.<br>Cover Art, Photography & Design: Roderick Shoolbraid.<br> &copy;All Rights Reserved.',
+  'All Sound & Composition: Roderick Shoolbraid.<br>Cover Art, Photography & Design: Roderick Shoolbraid.<br> &copy;All Rights Reserved.',
   'This album became the sequel to "Charlotta", composed and engineered over a 2 year period from 2003-2005, finished in the middle of 2005. The concept of "The City" emerged through the rough romantic plot of two people in a massive futuristic city, that seems dwarfed by the sentiments by them both.',
   6
 );
@@ -315,8 +315,8 @@ const album8 = new Album(
   'June 22, 2022',
   'June 22, 2022',
   1,
-  'All Sound, production & Composition: <br>Roderick Shoolbraid <br> Cover design: Roderick Shoolbraid All Rights Reserved.',
-  'A curated collection of some favourite pieces from the present discography. Spanning 20 years 2002-2022, this exposition showcases the work from a variety of different artistic perspectives: Electronica, Drone, Minimalism, Polytonality and Free Jazz. One is always a summary of influences. And in this compilation it is evident - an open letter to the history of electronic, electro-acoustic music and musique concrète. The appreciation for the natural world and Its interplay with the Astral.',
+  'All Sound, production & Composition: <br>Roderick Shoolbraid <br> Cover design: Roderick Shoolbraid <br> &copy;All Rights Reserved.',
+  'A curated collection of some favourite pieces from the present discography. Spanning 20 years 2002-2022, this exposition showcases the work from a variety of different artistic perspectives: Electronica, Drone, Minimalism, Polytonality and Free Jazz. <br>One is always a summary of influences. And in this compilation it is evident - an open letter to the history of electronic, electro-acoustic music and musique concrète. The appreciation for the natural world and Its interplay with the Astral.',
   14
 );
 albums.push(album8);
@@ -349,7 +349,7 @@ const album9 = new Album(
   'June 1, 2022',
   'June 28, 2022',
   1,
-  'All Sound & Composition: Roderick Shoolbraid Album Cover design: Roderick Shoolbraid All Rights Reserved.',
+  'All Sound & Composition: Roderick Shoolbraid<br> Cover design: Roderick Shoolbraid <br> &copy;All Rights Reserved.',
   'A simple minimal album exploring the images of places and structures that came to mind, while designing & demoing the synth patches created for Nonagon. Written from May to June 2022.',
   7
 );
@@ -376,7 +376,7 @@ const album10 = new Album(
   'November 15, 2015',
   'July 9, 2022',
   1,
-  'All Music & Sound: Roderick Shoolbraid Album Cover Design: Roderick Shoolbraid All Rights Reserved.',
+  'All Music & Sound: Roderick Shoolbraid <br> Cover Design: Roderick Shoolbraid <br> &copy;All Rights Reserved.',
   'A collection or curation of assorted tracks from 2003-2015. With some source files going back as far as 1996-7. Organized finally in a little volume of what I like to think of as sacred or holy music, music or sound for meditation into specific spaces, or at least it is what it is for me. Everyone will have their own experience of the ambient medicinal sounds, finding itself roots in Minimalism, Drone, Noise, & Lo Fi. This was my original intent behind the contemplative sound, and music I created, whether I am successful, I leave that in your hands and your mind.',
   9
 );
@@ -405,7 +405,7 @@ const album11 = new Album(
   'August 23, 2022',
   'September 3, 2023',
   1,
-  'All Sound and Composition: Roderick Shoolbraid. Album Cover Design: Roderick Shoolbraid. Painting: "Nocturnes" - Roderick Shoolbraid. All Rights Reserved.',
+  'All Sound and Composition: Roderick Shoolbraid. <br>Cover Design: Roderick Shoolbraid. <br>Painting: <em>"Nocturnes"</em> - Roderick Shoolbraid. <br> &copy;All Rights Reserved.',
   'A collection of 15 compositions, experiments and musings; all centred around night scenes, dreams, the mystical, and the subconscious. Using more challenging approach to scales and harmony, the album is influenced by Olivier Messiaen, György Ligeti, Gurdjieff, Sufi and Eastern Music.',
   15
 );
@@ -440,11 +440,11 @@ const album12 = new Album(
   'December 15, 2022',
   'January 24, 2023',
   1,
-  'All Sound and Composition: Roderick Shoolbraid Album Cover Design: Roderick Shoolbraid All Rights Reserved.',
+  'All Sound and Composition: Roderick Shoolbraid <br> Cover Design: Roderick Shoolbraid <br> &copy;All Rights Reserved.',
   '"Prefabrication" is an album that builds on the concept of Music for Seven Structures, it uses one central melodic passage interpreted from 10 different viewpoints.' +
-  'The motif is modified based on multiples of 4 and pitch in octaves, creating a library of relative sounds. These sounds are arranged together in patterns and structures using a fixed tempo of 120 bpm throughout the albums 10 pieces.' +
-  ' Predetermined edits and automation of effects are done to a grid to create an environment of chance. After this "prefabrication" stage, a more detailed finish is applied , drawing from the lexicon of modern electronica and IDM.' +
-  'The album is intended to be a collection of remixes on the subject of the experience of being inside a simple minimalist designed building.',
+  '<br>The motif is modified based on multiples of 4 and pitch in octaves, creating a library of relative sounds. These sounds are arranged together in patterns and structures using a fixed tempo of 120 bpm throughout the albums 10 pieces.' +
+  '<br> Predetermined edits and automation of effects are done to a grid to create an environment of chance. After this "prefabrication" stage, a more detailed finish is applied , drawing from the lexicon of modern electronica and IDM.' +
+  '<br>The album is intended to be a collection of remixes on the subject of the experience of being inside a simple minimalist designed building.',
   10
 );
 albums.push(album12);
@@ -473,7 +473,7 @@ const album13 = new Album(
   'January 15, 2023',
   'February 11, 2023',
   1,
-  'All Sound and Composition: Roderick Shoolbraid Album Cover Design: Roderick Shoolbraid All Rights Reserved.',
+  'All Sound and Composition: Roderick Shoolbraid <br> Cover Design: Roderick Shoolbraid <br> &copy;All Rights Reserved.',
   'A series of 8 tone poems on the inward experience of my healing journey.  Written over a course of 6 months from 2022, to the following year.',
   8
 );
@@ -501,16 +501,18 @@ const album14 = new Album(
   'February 15, 2023',
   'February 20, 2023',
   1,
-  'All Sound and Composition: Roderick Shoolbraid Album Cover Design: Roderick Shoolbraid All Rights Reserved.',
+  'All Sound and Composition: Roderick Shoolbraid <br>Location recording: (Exhibit A,B,C1-3): <br>Tanya Slingsby & Dylan Armour <br>Principal Cover photography: Dylan Armour <br> Cover Design: Roderick Shoolbraid <br> &copy;All Rights Reserved.',
   '"Found Sound" and location recordings from Amsterdam, processed and layered. Compiled in collages and atmospheres, as a portal to introspective travel.',
   9
 );
+
 albums.push(album14);
 artist1.albums.push(album14);
 
-// Songs for Album 14
+
+ //Songs for Album 14
 album14.songs.push(
-  new Song('1401', 'EXHIBIT A', 'https://storage.googleapis.com/ip-public-bucket1/Amsterdam-Concreet/EXHIBIT-A.mp3', '00:06:40', 1, 14, 1),
+new Song('1401', 'EXHIBIT A', 'https://storage.googleapis.com/ip-public-bucket1/Amsterdam-Concreet/EXHIBIT-A.mp3', '00:06:40', 1, 14, 1),
   new Song('1402', 'EXHIBIT B', 'https://storage.googleapis.com/ip-public-bucket1/Amsterdam-Concreet/EXHIBIT-B.mp3', '00:10:42', 1, 14, 2),
   new Song('1403', 'EXHIBIT C1', 'https://storage.googleapis.com/ip-public-bucket1/Amsterdam-Concreet/EXHIBIT-C1.mp3', '00:08:39', 1, 14, 3),
   new Song('1404', 'EXHIBIT C2', 'https://storage.googleapis.com/ip-public-bucket1/Amsterdam-Concreet/EXHIBIT-C2.mp3', '00:03:19', 1, 14, 4),
@@ -530,8 +532,8 @@ const album15 = new Album(
   'March 20, 2023',
   'March 24, 2023',
   1,
-  'All Sound and Composition: Roderick Shoolbraid Album Cover Design: Roderick Shoolbraid Watercolour: “Grass II” - Roderick Shoolbraid All Rights Reserved.',
-  'This album was a response creatively to the large project and emotionally requiring: VAGARY. WATERCOLOURS FOR FRIENDS was a return to a more simple melodic structure and production values of my first releases. With that in mind, I used sound sources and instruments from my first few years at sound design collage from 2002-3, with a view to create a minimalist palette.\nA wonderful friend had remarked that though she appreciated the foreboding, emotional gravity and unsettling nature of VAGARY and other work, it was pieces like "Spherical" of NONAGON that she liked. As she could do other things and be in the space with the music.\nThese comments greatly influenced the composition and structure of the sound, treating them like large rooms of watercolour paintings that one could be inside.',
+  'All Sound and Composition: Roderick Shoolbraid <br> Cover Design: Roderick Shoolbraid <br>Watercolour: <em>“Grass II”</em> - Roderick Shoolbraid <br> &copy All Rights Reserved.',
+  'This album was a response creatively to the large project and emotionally requiring: VAGARY. WATERCOLOURS FOR FRIENDS was a return to a more simple melodic structure and production values of my first releases. <br>With that in mind, I used sound sources and instruments from my first few years at sound design collage from 2002-3, with a view to create a minimalist palette. <br>A wonderful friend had remarked that though she appreciated the foreboding, emotional gravity and unsettling nature of VAGARY and other work, it was pieces like "Spherical" of NONAGON that she liked. As she could do other things and be in the space with the music.<br>These comments greatly influenced the composition and structure of the sound, treating them like large rooms of watercolour paintings that one could be inside.',
   7
 );
 albums.push(album15);
@@ -557,8 +559,8 @@ const album16 = new Album(
   'April 20, 2023',
   'April 30, 2023',
   1,
-  'All Sound and Composition: Roderick Shoolbraid Album Cover Design: Roderick Shoolbraid Photography: Roderick Shoolbraid All Rights Reserved.',
-  '“Postcards from Old Sounds” is a continuation from “Watercolours For Friends” in its approach to harmony and sound design. Using a long form minimalist structure, the idea is: that these small sounds from the early 2000s are carried forward into the present palette and shaped with modern tools. Telling us stories of where they have been. It was written in tandem with "Watercolours.." in the spring of 2023.',
+  'All Sound and Composition: Roderick Shoolbraid <br> Cover Design: Roderick Shoolbraid <br>Photography: Roderick Shoolbraid <br> &copy;All Rights Reserved.',
+  '“Postcards from Old Sounds” is a continuation from “Watercolours For Friends” in its approach to harmony and sound design. <br>Using a long form minimalist structure, the idea is: that these small sounds from the early 2000s are carried forward into the present palette and shaped with modern tools. <br>Telling us stories of where they have been. It was written in tandem with "Watercolours.." in the spring of 2023.',
   5
 );
 albums.push(album16);
@@ -582,10 +584,10 @@ const album17 = new Album(
   'June 15, 2023',
   'June 19, 2023',
   1,
-  'All Sound and Instruments: Roderick Shoolbraid. Album Cover Design: Roderick Shoolbraid. All Rights Reserved.',
-  `One starts with no real intentions sometimes, and after awhile the idea formulates and direction emerges. Such was the case with "SAKURA". Written during April and May of this year, 2023, the materials gathered from improvised sessions were interludes between the walks along the seaside, where the blossoms fell from the trees.
-All of this reminded me of the visit I had to Japan for 6 months in 1998-1999. I had been listening to a lot of city pop over the winter, and thinking about my good late friend Peter Stufano. I decided to use all of this as a starting point.
-I had a small library of samples of my friends playing several instruments: tabla, dumbek, kalimba, and flute; and these became the sources in sampler instruments for the melodies. I used location recordings of the walks along the sea and record skips from the end of the city pop & Japanese jazz records I was listening to as a backdrop. The piano samples are from public outdoor instrument recorded a couple years ago, and the guitar work was completed this month.
+  'All Sound and Instruments: Roderick Shoolbraid. <br> Cover Design: Roderick Shoolbraid. <br> &copy;All Rights Reserved.',
+  `One starts with no real intentions sometimes, and after awhile the idea formulates and direction emerges. Such was the case with "SAKURA". <br>Written during April and May of this year, 2023, the materials gathered from improvised sessions were interludes between the walks along the seaside, where the blossoms fell from the trees.
+<br>All of this reminded me of the visit I had to Japan for 6 months in 1998-1999. I had been listening to a lot of city pop over the winter, and thinking about my good late friend Peter Stufano. I decided to use all of this as a starting point.
+<br>I had a small library of samples of my friend playing several instruments: tabla, dumbek, kalimba, and flute; and these became the sources in sampler instruments for the melodies. <br>I used location recordings of the walks along the sea and record skips from the end of the city pop & Japanese jazz records I was listening to as a backdrop. <br>The piano samples are from public outdoor instrument recorded a couple years ago, and the guitar work was completed this month.
 These are the materials used to create the sonic paintings of my memories, please enjoy & thank you for listening.
 -Roderick`,
   7
@@ -773,7 +775,7 @@ function displayAlbumDetails(albumId) {
 
     const description = document.createElement('p');
     description.classList.add('albumDescription');
-    description.textContent = album.description;
+    description.innerHTML = album.description;
     albumDetails.appendChild(description);
 
     const credit = document.createElement('p');
