@@ -670,7 +670,10 @@ const album19 = new Album(
   Original Art: Kristin Shoolbraid<br>
   Processing and Cover design: Roderick Shoolbraid<br>
   &copy;All Rights Reserved.`,
-  `Written in 2023, "Rhombus" was a brief break away from "Poem For a Homeworld". It revealed itself a collection of sounds distilled into larger ideas. <br>I had been learning about and working with AI, and the following assortment of music reflects this exploration, and the deeper meaning behind it all. <br>It is written in lamenting tone, similar to "Poem...", but its more immediate in its time scale and locale. <br>A strange new future awaits us I am sure, these are the meditations on those themes.`,
+  `Written in 2023, "Rhombus" was a brief break away from "Poem For a Homeworld". It revealed itself a collection of sounds distilled into larger ideas. 
+  <br>I had been learning about and working with AI, and the following assortment of music reflects this exploration, and the deeper meaning behind it all. 
+  <br>It is written in lamenting tone, similar to "Poem...", but its more immediate in its time scale and locale. 
+  <br>A strange new future awaits us I am sure, these are the meditations on those themes.`,
   10
 );
 
@@ -692,7 +695,43 @@ album19.songs.push(
   new Song('1910', 'Art District', 'https://storage.googleapis.com/ip-public-bucket1/Rhombus/Art-District.mp3', '00:07:05', 1, 19, 10)
 );
 
+// Album 20
+const album20 = new Album(
+  20,
+  '01040120',
+  'Vignettes of Clouds',
+  'https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/20_Vignettes-of-Clouds.png',
+  '2024-04-15',
+  '2024-05-23',
+  1,
+  `All Sound and Instruments : Roderick Shoolbraid <br>Cover Design: Roderick Shoolbraid <br> &copy;All Rights Reserved.`,
+  `Inconsistently written over a period of 14 months (from: March 2023 to May 2024), a collection of out-takes, or experiments; 
+  <br>eventually became the foundation for a series of essays on the subject of 'clouds',and our relationship with them. 
+  <br>Halfway through the album, adjunctive compositions emerged and the overall thesis for the curation was complete. 
+  There are different routes to the same conclusion, that the mesmerizing stories of our friends of the sky hold a sacred truth, and a portal to a great understanding. 
+  `,
+  12
+);
 
+
+albums.push(album20);
+artist1.albums.push(album20);
+
+// Songs for Album 20
+album19.songs.push(
+  new Song('2001', 'Clouds I', 'https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/Clouds-I.mp3', '00:09:04', 1, 20, 1),
+  new Song('2002', 'Messages', 'https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/Messages.mp3', '00:07:44', 1, 20, 2),
+  new Song('2003', 'Cumulus', 'https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/Cumulus.mp3', '00:03:38', 1, 20, 3),
+  new Song('2004', 'Fractus', 'https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/Fractus.mp3', '00:05:36', 1, 20, 4),
+  new Song('2005', 'A Cloud’s Poem to the Rain below', 'https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/A-Clouds-Poem-to-the-Rain-below.mp3', '00:05:52', 1, 20, 5),
+  new Song('2006', 'Cloud Light above the Sea', 'https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/Cloud-Light-above-the-Sea.mp3', '00:03:46', 1, 20, 6),
+  new Song('2007', 'Morning Clouds', 'https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/Morning-Clouds.mp3', '00:06:04', 1, 20, 7),
+  new Song('2008', 'A Cloud’s visit to the Artist', 'https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/A-Clouds-visit-to-the-Artist.mp3', '00:02:48', 1, 20, 8),
+  new Song('2009', 'Mountain Tops amongst the White', 'https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/Mountain-Tops-amongst-the-White.mp3', '00:02:48', 1, 20, 9),
+  new Song('2010', 'Clouds and the City', 'https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/Mountain-Tops-amongst-the-White.mp3', '00:07:33', 1, 20, 10),
+  new Song('2011', 'Formations', 'https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/Formations.mp3', '00:05:40', 1, 20, 11),
+  new Song('2012', 'Clouds II', 'https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/Clouds-II.mp3', '00:04:34', 1, 20, 12),
+);
 
 
 
