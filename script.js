@@ -657,22 +657,24 @@ const album19 = new Album(
   'January 1, 2024',
   1,
   `All Sound and Music: Roderick Shoolbraid<br>
-Words: Roderick Shoolbraid <br>*except for "Art District" : Lovina Lakatua<br>
-Vocal Samples All other tracks: Roderick Shoolbraid<br>
+  Words: Roderick Shoolbraid <br>*except for "Art District" : Lovina Lakatua<br>
+  Vocal Samples All other tracks: Roderick Shoolbraid<br>
 
-"Art District" :<br>
-Vocal sample provided by: Lovina Lakatua<br>
+  "Art District" :<br>
+  Vocal sample provided by: Lovina Lakatua<br>
 
-"A window is a Friend of Rain" :<br>
-Vocal sample provided by: Lovina & Ruby Lakatua<br>
+  "A window is a Friend of Rain" :<br>
+  Vocal sample provided by: Lovina & Ruby Lakatua<br>
 
-Cover:<br>
-Original Art: Kristin Shoolbraid<br>
-Processing and Cover design: Roderick Shoolbraid<br>
-&copy;All Rights Reserved.`
+  Cover:<br>
+  Original Art: Kristin Shoolbraid<br>
+  Processing and Cover design: Roderick Shoolbraid<br>
+  &copy;All Rights Reserved.`,
   `Written in 2023, "Rhombus" was a brief break away from "Poem For a Homeworld". It revealed itself a collection of sounds distilled into larger ideas. <br>I had been learning about and working with AI, and the following assortment of music reflects this exploration, and the deeper meaning behind it all. <br>It is written in lamenting tone, similar to "Poem...", but its more immediate in its time scale and locale. <br>A strange new future awaits us I am sure, these are the meditations on those themes.`,
   10
 );
+
+
 albums.push(album19);
 artist1.albums.push(album19);
 
