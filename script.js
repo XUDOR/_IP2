@@ -124,7 +124,7 @@ const album1 = new Album(
   'May 1, 2005',
   'October 3, 2010',
   1,
-  'All Sound & Composition: Roderick Shoolbraid. Album Cover Art, Photography & Design: Roderick Shoolbraid. All Rights Reserved.',
+  'All Sound & Composition: Roderick Shoolbraid.<br>Cover Art, Photography & Design: Roderick Shoolbraid.<br> &copy;All Rights Reserved.',
   'The debut ambient electronic album by Roderick Shoolbraid, written in a span from 2003 to 2005. Released in 2010. A soundtrack for a dream, and a film that never was.',
   8
 );
@@ -152,7 +152,7 @@ const album2 = new Album(
   'March 1, 2006',
   'October 10, 2010',
   1,
-  'All Sound & Composition: Roderick Shoolbraid. Album Cover Art, Photography & Design: Roderick Shoolbraid. All Rights Reserved',
+  'All Sound & Composition: Roderick Shoolbraid.<br>Album Cover Art, Photography & Design: Roderick Shoolbraid.<br> All Rights Reserved.',
   'Between "Charlotta" & "Glass City of Us" (2004-6), this darker album explored minimal ambient music. It used noise, line hum, record skips, and drone reverbs. Inspired by the idea that objects in math, physics, & chemistry have their own music, if we listen closely.',
   6
 );
@@ -178,7 +178,7 @@ const album3 = new Album(
   'April 1, 2005',
   'October 6, 2010',
   1,
-  'All Sound & Composition: Roderick Shoolbraid. Album Cover Art, Photography & Design: Roderick Shoolbraid. All Rights Reserved.',
+  'All Sound & Composition: Roderick Shoolbraid.<br>Album Cover Art, Photography & Design: Roderick Shoolbraid.<br> All Rights Reserved.',
   'This album became the sequel to "Charlotta", composed and engineered over a 2 year period from 2003-2005, finished in the middle of 2005. The concept of "The City" emerged through the rough romantic plot of two people in a massive futuristic city, that seems dwarfed by the sentiments by them both.',
   6
 );
@@ -204,7 +204,7 @@ const album4 = new Album(
   'May 15, 2005',
   'October 19, 2010',
   1,
-  'All Sound & Composition: Roderick Shoolbraid. Album Cover Art, Photography & Design: Roderick Shoolbraid. All Rights Reserved.',
+  'All Sound & Composition: Roderick Shoolbraid.<br>Album Cover Art, Photography & Design: Roderick Shoolbraid.<br> All Rights Reserved.',
   'Music for visions of the future.',
   6
 );
@@ -230,7 +230,7 @@ const album5 = new Album(
   'March 15, 2022',
   'March 22, 2022',
   1,
-  'All Sound and Instruments: Roderick Shoolbraid. Painting & Album Cover Design: Roderick Shoolbraid. All Rights Reserved.',
+  'All Sound and Instruments: Roderick Shoolbraid. <br>Painting & Album Cover Design: Roderick Shoolbraid. <br>All Rights Reserved.',
   'An open letter of love and admiration for the natural world.',
   9
 );
@@ -757,82 +757,89 @@ function displayAlbumDetails(albumId) {
   const sidebar = document.querySelector('.sidebar');
 
   if (album) {
-      sidebar.style.display = 'block';
-      sidebar.style.flexBasis = '25%';
+    sidebar.style.display = 'block';
+    sidebar.style.flexBasis = '25%';
 
-      const sidebarContent = document.querySelector('.sidebar .sidebar-content');
-      sidebarContent.innerHTML = '';
+    const sidebarContent = document.querySelector('.sidebar .sidebar-content');
+    sidebarContent.innerHTML = '';
 
-      const albumDetails = document.createElement('div');
-      albumDetails.classList.add('albumDetails');
+    const albumDetails = document.createElement('div');
+    albumDetails.classList.add('albumDetails');
 
-      const title = document.createElement('h2');
-      title.classList.add('albumName');
-      title.textContent = album.name;
-      albumDetails.appendChild(title);
+    const title = document.createElement('h2');
+    title.classList.add('albumName');
+    title.textContent = album.name;
+    albumDetails.appendChild(title);
 
-      const description = document.createElement('p');
-      description.classList.add('albumDescription');
-      description.textContent = album.description;
-      albumDetails.appendChild(description);
+    const description = document.createElement('p');
+    description.classList.add('albumDescription');
+    description.textContent = album.description;
+    albumDetails.appendChild(description);
 
-      // Add the albumDetails to sidebar content
-      sidebarContent.appendChild(albumDetails);
+    const credit = document.createElement('p');
+    credit.classList.add('albumCredit');
+    credit.innerHTML = album.credit;
+    albumDetails.appendChild(credit);
 
-      // Inject the album info (catalogue # and release date)
-      const albumInfo = document.createElement('div');
-      albumInfo.classList.add('album-info');
-      
-      const catalogueNumber = document.createElement('div');
-      catalogueNumber.classList.add('catalogue-number');
-      catalogueNumber.textContent = ` ${album.catalogue}`;
-      albumInfo.appendChild(catalogueNumber);
 
-      const productionDate = document.createElement('div');
-      productionDate.classList.add('production-date');
-      productionDate.textContent = `${album.production_date}`;
-      albumInfo.appendChild(productionDate);
 
-      const releaseDate = document.createElement('div');
-      releaseDate.classList.add('release-date');
-      releaseDate.textContent = `${album.release_date}`;
-      albumInfo.appendChild(releaseDate);
+    // Add the albumDetails to sidebar content
+    sidebarContent.appendChild(albumDetails);
 
-      // Append album-info to sidebar content
-      sidebarContent.appendChild(albumInfo);
+    // Inject the album info (catalogue # and release date)
+    const albumInfo = document.createElement('div');
+    albumInfo.classList.add('album-info');
 
-      
-      // Create a container for the song list
-      const songListContainer = document.createElement('div');
-      songListContainer.classList.add('songListContainer');
+    const catalogueNumber = document.createElement('div');
+    catalogueNumber.classList.add('catalogue-number');
+    catalogueNumber.textContent = ` ${album.catalogue}`;
+    albumInfo.appendChild(catalogueNumber);
 
-      // Create the song list
-      const songList = document.createElement('ul');
-      songList.classList.add('songList');
+    const productionDate = document.createElement('div');
+    productionDate.classList.add('production-date');
+    productionDate.textContent = `${album.production_date}`;
+    albumInfo.appendChild(productionDate);
 
-      // Iterate through each song in the album and create a list item
-      album.songs.forEach(song => {
-          const songItem = document.createElement('li');
-          songItem.textContent = `${song.track_id}. ${song.name} (${song.duration})`;
-          songList.appendChild(songItem);
+    const releaseDate = document.createElement('div');
+    releaseDate.classList.add('release-date');
+    releaseDate.textContent = `${album.release_date}`;
+    albumInfo.appendChild(releaseDate);
 
-          // Add click event to play song
-          songItem.addEventListener('click', () => {
-              playSong(song.id, albumId);
-          });
+    // Append album-info to sidebar content
+    sidebarContent.appendChild(albumInfo);
+
+
+    // Create a container for the song list
+    const songListContainer = document.createElement('div');
+    songListContainer.classList.add('songListContainer');
+
+    // Create the song list
+    const songList = document.createElement('ul');
+    songList.classList.add('songList');
+
+    // Iterate through each song in the album and create a list item
+    album.songs.forEach(song => {
+      const songItem = document.createElement('li');
+      songItem.textContent = `${song.track_id}. ${song.name} (${song.duration})`;
+      songList.appendChild(songItem);
+
+      // Add click event to play song
+      songItem.addEventListener('click', () => {
+        playSong(song.id, albumId);
       });
+    });
 
-      // Append the song list to the songListContainer
-      songListContainer.appendChild(songList);
+    // Append the song list to the songListContainer
+    songListContainer.appendChild(songList);
 
-      // Append the songListContainer to the sidebar content
-      sidebarContent.appendChild(songListContainer);
+    // Append the songListContainer to the sidebar content
+    sidebarContent.appendChild(songListContainer);
   } else {
-      // Collapse and hide the sidebar if albumId is invalid
-      sidebar.style.flexBasis = '0%';
-      setTimeout(() => {
-          sidebar.style.display = 'none'; // Hide sidebar after transition
-      }, 500); // Delay to match the transition time for smooth effect
+    // Collapse and hide the sidebar if albumId is invalid
+    sidebar.style.flexBasis = '0%';
+    setTimeout(() => {
+      sidebar.style.display = 'none'; // Hide sidebar after transition
+    }, 500); // Delay to match the transition time for smooth effect
   }
 }
 

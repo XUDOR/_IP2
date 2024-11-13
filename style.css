@@ -117,6 +117,8 @@ main {
   justify-content: space-between;
 }
 
+
+
 .catalogue-number,
 .release-date,
 .production-date {
@@ -199,6 +201,13 @@ main {
 .sidebar .albumDescription {
   color: #8ab7ce;
   margin-bottom: 0.8em;
+}
+
+.sidebar .albumCredit {
+  border-top: 1px solid #184551;
+  padding-top: 10px;
+  color: #829D9E;
+  margin-bottom: 0.6em;
 }
 
 .sidebar .songListContainer {
