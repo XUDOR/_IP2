@@ -615,13 +615,13 @@ const album18 = new Album(
   'October 20, 2023',
   'October 25, 2023',
   1,
-  `All Sound and Instruments: Roderick Shoolbraid 
-Voice sample on track #1: Lynn Demers 
-Voice sample on track #7: Lovina Lakatua 
-Vocal on track #7: Ruby Lakatua
-Album Cover Design: Roderick Shoolbraid 
-All Rights Reserved.`,
-  `A cascade of experiences, a free fall into pulp science fiction of singular memory, set against 1990s electronic music’s landscape & language. What is the plot summary for our protagonist? Only the environments know. Written over 7 months pulling from reservoirs of old and new sounds: "Poem for a Homeworld" has a history of its own. Where are we in the index of portals? "Have I not been here before?" asks the lone traveller as all paths lead back to the beginning of the contemplations: "Am I alone? If I am alone in the universe, am I then not alone? If I am held in the embrace of the expanse of the universe?" These are the questions and revelations of our story, painted in the colours and reference of nostalgia.
+  `All Sound and Instruments: Roderick Shoolbraid<br> 
+Voice sample on track #1: Lynn Demers<br> 
+Voice sample on track #7: Lovina Lakatua <br>
+Vocal on track #7: Ruby Lakatua<br>
+Cover Design: Roderick Shoolbraid<br> 
+&copy;All Rights Reserved.`,
+  `A cascade of experiences, a free fall into pulp science fiction of singular memory, set against 1990s electronic music’s landscape & language. <br>What is the plot summary for our protagonist? Only the environments know. <br>Written over 7 months pulling from reservoirs of old and new sounds: <em>"Poem for a Homeworld"</em> has a history of its own. <br>Where are we in the index of portals? "Have I not been here before?" asks the lone traveller as all paths lead back to the beginning of the contemplations: <br><br>"Am I alone? If I am alone in the universe, am I then not alone? If I am held in the embrace of the expanse of the universe?" <br><br>These are the questions and revelations of our story, painted in the colours and reference of nostalgia.
 A lament from a distant future, a chaos of remembrance; an understanding that all time exists at once, on the cusp of the Void. A narrative set against the abstracted lexicon of 90s ambient drum & bass on a bed of watercolours of experiments. Completed by the fall of 2023.`,
   15
 );
@@ -656,20 +656,21 @@ const album19 = new Album(
   'December 15, 2023',
   'January 1, 2024',
   1,
-  `All Sound and Music: Roderick Shoolbraid
-Words: Roderick Shoolbraid -- except for "Art District" : Lovina Lakatua
-Vocal Samples All other tracks: Roderick Shoolbraid
+  `All Sound and Music: Roderick Shoolbraid<br>
+Words: Roderick Shoolbraid <br>*except for "Art District" : Lovina Lakatua<br>
+Vocal Samples All other tracks: Roderick Shoolbraid<br>
 
-"Art District" :
-Vocal sample provided by: Lovina Lakatua
+"Art District" :<br>
+Vocal sample provided by: Lovina Lakatua<br>
 
-"A window is a Friend of Rain" :
-Vocal sample provided by: Lovina & Ruby Lakatua
+"A window is a Friend of Rain" :<br>
+Vocal sample provided by: Lovina & Ruby Lakatua<br>
 
-Cover:
-Original Art: Kristin Shoolbraid
-Processing and Cover design: Roderick Shoolbraid`,
-  `Written in 2023, "Rhombus" was a brief break away from "Poem For a Homeworld". It revealed itself a collection of sounds distilled into larger ideas. I had been learning about and working with AI, and the following assortment of music reflects this exploration, and the deeper meaning behind it all. It is written in lamenting tone, similar to "Poem...", but its more immediate in its time scale and locale. A strange new future awaits us I am sure, these are the meditations on those themes.`,
+Cover:<br>
+Original Art: Kristin Shoolbraid<br>
+Processing and Cover design: Roderick Shoolbraid<br>
+&copy;All Rights Reserved.`
+  `Written in 2023, "Rhombus" was a brief break away from "Poem For a Homeworld". It revealed itself a collection of sounds distilled into larger ideas. <br>I had been learning about and working with AI, and the following assortment of music reflects this exploration, and the deeper meaning behind it all. <br>It is written in lamenting tone, similar to "Poem...", but its more immediate in its time scale and locale. <br>A strange new future awaits us I am sure, these are the meditations on those themes.`,
   10
 );
 albums.push(album19);
