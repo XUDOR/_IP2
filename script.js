@@ -704,7 +704,7 @@ const album20 = new Album(
   '2024-04-15',
   '2024-05-23',
   1,
-  `All Sound and Instruments : Roderick Shoolbraid <br>Cover Design: Roderick Shoolbraid <br> &copy;All Rights Reserved.`,
+  `All Sound & Instruments : Roderick Shoolbraid <br>Cover Design: Roderick Shoolbraid <br> &copy;All Rights Reserved.`,
   `Inconsistently written over a period of 14 months (from: March 2023 to May 2024), - a collection of out-takes, or experiments; 
   eventually became the foundation for a series of essays on the subject of 'clouds',and our relationship with them. 
   <br>Halfway through the album, adjunctive compositions emerged and the overall thesis for the curation was complete. 
