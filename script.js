@@ -286,7 +286,7 @@ const album7 = new Album(
   'May 15, 2022',
   'June 14, 2022',
   1,
-  'All Sound, production and Composition: Roderick Shoolbraid <br> Cover design: Roderick Shoolbraid <br> &copy;All Rights Reserved.',
+  'All Sound, production & Composition: <br>Roderick Shoolbraid <br> Cover design: Roderick Shoolbraid <br> &copy;All Rights Reserved.',
   'Lines drawn by field recordings, manipulated and accompanied by guitars & bass. Coloured in by synths and reverb to show a space of the beauty of geometry. Sound sources from: 1996-7, 2003-15. Compiled and finished in summer 2022.',
   9
 );
@@ -315,7 +315,7 @@ const album8 = new Album(
   'June 22, 2022',
   'June 22, 2022',
   1,
-  'All Sound, production and Composition: Roderick Shoolbraid Album Cover design: Roderick Shoolbraid All Rights Reserved.',
+  'All Sound, production & Composition: <br>Roderick Shoolbraid <br> Cover design: Roderick Shoolbraid All Rights Reserved.',
   'A curated collection of some favourite pieces from the present discography. Spanning 20 years 2002-2022, this exposition showcases the work from a variety of different artistic perspectives: Electronica, Drone, Minimalism, Polytonality and Free Jazz. One is always a summary of influences. And in this compilation it is evident - an open letter to the history of electronic, electro-acoustic music and musique concrète. The appreciation for the natural world and Its interplay with the Astral.',
   14
 );
