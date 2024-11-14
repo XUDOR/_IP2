@@ -752,7 +752,7 @@ albums.push(album21);
 artist1.albums.push(album21);
 
 // Songs for Album 21
-album20.songs.push(
+album21.songs.push(
   new Song('2101', 'I: Abstraction & Landscape', 'https://storage.googleapis.com/ip-public-bucket1/Jikan/I-Abstraction-and-Landscape.mp3', '06:38', 1, 21, 1),
   new Song('2102', 'II: The Colour of Life', 'https://storage.googleapis.com/ip-public-bucket1/Jikan/II-The-Colour-of-Life.mp3', '06:16', 1, 21, 2),
   new Song('2103', 'III: The Sun of The Day', 'https://storage.googleapis.com/ip-public-bucket1/Jikan/III-The-Sun-of-The-Day.mp3', '04:07', 1, 21, 3),
