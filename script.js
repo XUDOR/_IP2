@@ -701,8 +701,8 @@ const album20 = new Album(
   '01040120',
   'Vignettes of Clouds',
   'https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/20_Vignettes-of-Clouds.png',
-  '2024-04-15',
-  '2024-05-23',
+  'April 15, 2024',
+  'May 23, 2024',
   1,
   `All Sound & Instruments : Roderick Shoolbraid <br>Cover Design: Roderick Shoolbraid <br> &copy;All Rights Reserved.`,
   `Inconsistently written over a period of 14 months (from: March 2023 to May 2024), - a collection of out-takes, or experiments; 
@@ -732,6 +732,39 @@ album20.songs.push(
   new Song('2011', 'Formations', 'https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/Formations.mp3', '05:40', 1, 20, 11),
   new Song('2012', 'Clouds II', 'https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/Clouds-II.mp3', '04:34', 1, 20, 12),
 );
+
+// Album 21
+const album21 = new Album(
+  21,
+  '01040121',
+  'JIKAN | Original Soundtrack',
+  'https://storage.googleapis.com/ip-public-bucket1/Jikan/21_JIKAN.png',
+  'April 15, 2016',
+  'September 30, 2024',
+  1,
+  `All Sound, Composition & Music: Roderick Shoolbraid <br> &copy; All rights reserved`,
+  `Original Soundtrack to the 35 minute 2016 film, a time essay of the sculpture - JIKAN by Lynn Demers.`,
+  12
+);
+
+
+albums.push(album21);
+artist1.albums.push(album21);
+
+// Songs for Album 21
+album20.songs.push(
+  new Song('2101', 'I: Abstraction & Landscape', 'https://storage.googleapis.com/ip-public-bucket1/Jikan/I-Abstraction-and-Landscape.mp3', '06:38', 1, 21, 1),
+  new Song('2102', 'II: The Colour of Life', 'https://storage.googleapis.com/ip-public-bucket1/Jikan/II-The-Colour-of-Life.mp3', '06:16', 1, 21, 2),
+  new Song('2103', 'III: The Sun of The Day', 'https://storage.googleapis.com/ip-public-bucket1/Jikan/III-The-Sun-of-The-Day.mp3', '04:07', 1, 21, 3),
+  new Song('2104', 'IV: Rain of the Fall', 'https://storage.googleapis.com/ip-public-bucket1/Jikan/IV-The-Rain-of-the-Fall.mp3', '08:43', 1, 21, 4),
+  new Song('2105', 'V: The Fire of Autumn', 'https://storage.googleapis.com/ip-public-bucket1/Jikan/V-The-Fire-of-Autumn.mp3', '05:13', 1, 21, 5),
+  new Song('2106', 'VI: The Slumber of Snow', 'https://storage.googleapis.com/ip-public-bucket1/Jikan/VI-The-Slumber-of-Snow.mp3', '05:15', 1, 21, 6),
+  new Song('2107', 'JIKAN: Continuous |Movements 1-6', 'https://storage.googleapis.com/ip-public-bucket1/Jikan/JIKAN-Continuous-Movements1-6.mp3', '36:12', 1, 21, 7),
+  
+);
+
+
+
 
 
 
