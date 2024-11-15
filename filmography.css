@@ -1,0 +1,60 @@
+/* Reset some default styles for consistency */
+* {
+  box-sizing: border-box;
+}
+
+/* Main Film Grid Layout */
+.film-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Film Container Styling */
+.film-container {
+    background-color: #083D5E;
+    padding: 15px;
+    color: #cadbda;
+    border: 1px solid #2b7f8c;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.film-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Embedded Vimeo Video Styling */
+.film-container iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Film Description Styling */
+.film-container p {
+    font-size: 1em;
+    color: #cadbda;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .film-grid {
+        padding: 10px;
+    }
+
+    .film-container {
+        padding: 10px;
+    }
+
+    .film-container p {
+        font-size: 0.9em;
+    }
+}
