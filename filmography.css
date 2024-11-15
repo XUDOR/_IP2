@@ -18,14 +18,13 @@
     color: #cadbda;
     border: 1px solid #2b7f8c;
     text-align: center;
-    border-radius: 8px;
+    
     overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, 
 }
 
 .film-container:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #737F3A
 }
 
 /* Embedded Vimeo Video Styling */
