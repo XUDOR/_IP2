@@ -764,7 +764,49 @@ album21.songs.push(
 );
 
 
+// Album 22
+const album22 = new Album(
+  21,
+  '01040122',
+  'Apocrypha',
+  'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/APOCRYPHA_Resize.png',
+  'January 18, 2025',
+  'January 18, 2025',
+  1,
+  `All Sound, Composition & Music: Roderick Shoolbraid <br> &copy; All rights reserved`,
+  `
+  There is a stillness in the wind, and the boat rounds the misty corner.  There is a quickening to the current, and the song of the water lapping up against the hull, starts to sing louder.  <br>
+  A shard of light appears through the clouds.  A golden light and yet we know its not the sun.<br>
+There is an understanding before one understands one has understood, and there is no container for the impression.  I wonder how the mathematics feel about that.  <br>
+We are on the cusp of something and yet in the void.   <br>This Album was written over a long period of time, from 2023 until now. However there are parts which date back years, or even decades.  <br>
+It is a solace to have this idea come to its completion.  
+<br>I invite you to listen to the essays on the satori of the machines.
+  `,
+  15
+);
 
+
+albums.push(album22);
+artist1.albums.push(album22);
+
+// Songs for Album 22
+album21.songs.push(
+  new Song('2201', 'Apocrypha', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Apocrypha.mp3', '11:29', 1, 22, 1),
+  new Song('2202', 'Hermitage', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Hermitage.mp3', '05:35', 1, 22, 2),
+  new Song('2203', 'Decision Weight', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Decision-Weight.mp3', '04:07', 1, 22, 3),
+  new Song('2204', 'Black Box', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Black-Box.mp3', '07:44', 1, 22, 4),
+  new Song('2205', 'Compute', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Compute.mp3', '2:04', 1, 22, 5),
+  new Song('2206', 'Data Tree', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Data-Tree.mp3', '04:18', 1, 22, 6),
+  new Song('2207', 'Jacquard', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Jacquard.mp3', '05:50', 1, 22, 7),
+  new Song('2208', 'To be watched amongst the Random Forest', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/To-be-watched-amongst-the-Random-Forest.mp3', '07:00', 1, 22, 8),
+  new Song('2209', 'Sigma', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Sigma.mp3', '08:39', 1, 22, 9),
+  new Song('2209', 'Post Singularities', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Post-Singularities.mp3', '08:39', 1, 22, 10),
+  new Song('2211', 'The City Beyond!', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/The-City-Beyond!.mp3', '04:20', 1, 22,11),
+  new Song('2212', 'Behold the Eyes that see though you', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Behold-the-Eyes-that-see-though-you.mp3', '05:20', 1, 22,12),
+  new Song('2213', 'The Poems of Integers', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/The-Poems-of-Integers.mp3', '03:49', 1, 22, 13),
+  new Song('2214', 'Task:', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Task.mp3', '04:38', 1, 22, 14),
+  new Song('2215', 'Abzu', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Abzu.mp3', '06:01', 1, 22, 15),
+);
 
 
 
