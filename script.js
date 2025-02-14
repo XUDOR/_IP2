@@ -808,7 +808,44 @@ album22.songs.push(
   new Song('2215', 'Abzu', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Abzu.mp3', '06:01', 1, 22, 15),
 );
 
+// Album 23
+const album23 = new Album(
+  23,
+  '01040123',
+  'Ambient Garden Two',
+  'https://storage.googleapis.com/ip-public-bucket1/Ambient-Garden-Two/AMBIENTGARDENTWOsm-v2.png',
+  'February 13, 2025',
+  'February 13, 2025',
+  1,
+  `All Sound, Composition & Music: Roderick Shoolbraid <br> &copy; All rights reserved`,
+  `
+  The Second curation of Roderick's work featuring a selection from each of his 14 albums released over the last 3 years.
+  `,
+  14
+);
 
+
+albums.push(album23);
+artist1.albums.push(album22);
+
+// Songs for Album 23
+album23.songs.push(
+  new Song('2301', 'IV | Music for Seven Structures', 'https://storage.googleapis.com/ip-public-bucket1/Music-For-Seven-Structures/STRUCTURE-4.mp3', '02:41', 1, 23, 1),
+  new Song('2302', 'Moment of Light | Inner Moments of Light', 'https://storage.googleapis.com/ip-public-bucket1/Inner-Moment-of-Light/MOMENT-OF-LIGHT.mp3', '04:34', 1, 23, 2),
+  new Song('2303', 'Beyond the Veils | Nocturnes & Reveries', 'https://storage.googleapis.com/ip-public-bucket1/Nocturnes-and-Reveries/Beyond-the-Veils.mp3', '07:08', 1, 23, 3),
+  new Song('2304', 'Open Concept | Prefabrication', 'https://storage.googleapis.com/ip-public-bucket1/Prefabrication/OPEN-CONCEPT.mp3', '08:00', 1, 23, 4),
+  new Song('2305', 'III- Axons to the Void | Vagary', 'https://storage.googleapis.com/ip-public-bucket1/Vagary/III-Axons-to-the-Void.mp3', '07:18', 1, 23, 5),
+  new Song('2306', 'EXHIBIT C3 | Amsterdam Concreet', 'https://storage.googleapis.com/ip-public-bucket1/Amsterdam-Concreet/EXHIBIT-C3.mp3', '05:27', 1, 23, 6),
+  new Song('2307', 'Artwork of Children | Watercolours for Friends', 'https://storage.googleapis.com/ip-public-bucket1/Watercolours-for-Friends/ARTWORK-OF-CHILDREN.mp3', '06:20', 1, 23, 7),
+  new Song('2308', 'Celestial Drum | Postcards from Old Sounds', 'https://storage.googleapis.com/ip-public-bucket1/Postcards-From-Old-Sounds/CELESTIAL-DRUM.mp3', '09:36', 1, 23, 8),
+  new Song('2309', 'Asa no Tori | Sakura', 'https://storage.googleapis.com/ip-public-bucket1/Sakura/Asa-no-Tori.mp3', '07:49', 1, 23, 9),
+  new Song('2310', 'Bouquet against the Blackness of Space | Poem for a Homeworld', 'https://storage.googleapis.com/ip-public-bucket1/Poem-For-A-Homeworld/Bouquet-against-the-Blackness-of-Space.mp3', '03:52', 1, 23, 10),
+  new Song('2311', 'Sunrise in Primary Colors | Rhombus', 'https://storage.googleapis.com/ip-public-bucket1/Rhombus/Sunrise-In-Primary-Colors.mp3', '04:02', 1, 23, 11),
+  new Song('2312', 'A Cloud’s visit to the Artist | Vignettes of Clouds', 'https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/A-Clouds-visit-to-the-Artist.mp3', '02:48', 1, 23, 12),
+  new Song('2313', 'VI: The Slumber of Snow | JIKAN | Original Soundtrack ', 'https://storage.googleapis.com/ip-public-bucket1/Jikan/VI-The-Slumber-of-Snow.mp3', '05:15', 1, 23, 13),
+  new Song('2314', 'Abzu | APOCRYPHA', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Abzu.mp3', '06:01', 1, 23, 14),
+  
+);
 
 // Now, create the data object that contains all the data
 const data = {
