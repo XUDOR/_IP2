@@ -15,8 +15,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
-  padding-bottom: 150px;
-  /* Adjust based on footer height */
+  padding-bottom: 150px; /* Adjust based on footer height */
 }
 
 /* Header Styles */
@@ -36,8 +35,7 @@ header .Logo {
 }
 
 header .Logo img {
-  width: 200px;
-  /* Set the desired width */
+  width: 200px; /* Set the desired width */
   height: auto;
   display: block;
 }
@@ -99,15 +97,13 @@ main {
 
 /* Enlarged Image */
 .album-art img.enlarged {
-  grid-column: 1 / -1;
-  /* Span all columns */
+  grid-column: 1 / -1; /* Span all columns */
   width: 100%;
   height: auto;
   justify-self: center;
 }
 
 .album-info {
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -117,8 +113,6 @@ main {
   justify-content: space-between;
 }
 
-
-
 .catalogue-number,
 .release-date,
 .production-date {
@@ -127,21 +121,15 @@ main {
   margin-bottom: 5px;
 }
 
-
 .production-date {
   color: #7E8D9B;
 }
 
-
 /* Sidebar Styles */
 .sidebar {
-  display: none;
-  /* Initially hidden */
-  flex: 0 0 0%;
-  /* Start with 0% width */
-  transition: width 0.5s ease-in-out;
-  /* Smooth transition */
-  /* Retain other styles */
+  display: none;            /* Initially hidden */
+  flex: 0 0 0%;            /* Start with 0% width */
+  transition: width 0.5s ease-in-out; /* Smooth transition */
   background-color: #083D5E;
   border-left: 1px solid #cadbda;
   padding: 3px;
@@ -152,8 +140,6 @@ main {
   overflow: hidden;
   margin: 5px;
 }
-
-
 
 /* Styles for details and summary in the sidebar */
 .sidebar-details {
@@ -167,21 +153,16 @@ main {
   padding: 5px;
   background-color: #2b7f8c;
   color: #cadbda;
-
 }
 
-/* Keep default disclosure triangle */
-.sidebar-details summary::-webkit-details-marker {
-  /* Default styling */
-}
-
+.sidebar-details summary::-webkit-details-marker,
 .sidebar-details summary::marker {
-  /* Default styling */
+  /* Keep default disclosure triangle */
 }
 
 /* Sidebar Content */
 .sidebar .sidebar-content {
-  /* This will contain the dynamic content */
+  /* This will contain dynamic content */
 }
 
 /* Sidebar Inner Content Styles */
@@ -235,11 +216,27 @@ main {
 }
 
 .song-duration {
-  color: #8ab7ce; /* Replace with your desired color */
-  margin-left: 10px; /* Optional: adds some spacing */
+  color: #8ab7ce;
+  margin-left: 10px;
 }
 
-
+/* Purchase Link */
+.sidebar .purchaseLink {
+  margin: 8px 0;
+  text-align: left;
+}
+.sidebar .purchaseLink a {
+  color: #fff;
+  background-color: #2b7f8c;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9em;
+  transition: background-color 0.2s;
+}
+.sidebar .purchaseLink a:hover {
+  background-color: #19606b;
+}
 
 /* Footer Styles */
 footer {
@@ -263,13 +260,11 @@ footer {
   padding: 5px;
   background-color: #083D5E;
   color: #cadbda;
-
 }
 
-/* Keep default disclosure triangle */
 .footer-details summary::-webkit-details-marker,
 .footer-details summary::marker {
-  /* Default styling */
+  /* Keep default disclosure triangle */
 }
 
 .foot-cont {
@@ -317,7 +312,7 @@ footer {
 
 .custom-audio-controls button {
   background: none;
-  border: none;
+  border: 1px solid #083D5E;
   outline: none;
   cursor: pointer;
   margin-right: 15px;
@@ -336,43 +331,40 @@ footer {
 /* Replace the paths below with your actual icon paths */
 .custom-audio-controls button.play {
   background-image: url('assets/CASS-PLAY-v2.svg');
-  border: 1px solid #083D5E;
 }
 
 .custom-audio-controls button.pause {
   background-image: url('assets/CASS-PAUSE.svg');
-  border: 1px solid #083D5E;
 }
 
 .custom-audio-controls button.stop {
   background-image: url('assets/CASS-STOP.svg');
-  border: 1px solid #083D5E;
 }
 
 .custom-audio-controls button.forward30 {
   background-image: url('assets/CASS-fwd30_BLUE.svg');
-  border: 1px solid #083D5E;
 }
 
 .custom-audio-controls button.back30 {
   background-image: url('assets/CASS-bkwd30_BLUE.svg');
-  border: 1px solid #083D5E;
 }
 
 .custom-audio-controls button.next {
   background-image: url('assets/CASS-FWD_BLUE-5.svg');
-  border: 1px solid #083D5E;
 }
 
 .custom-audio-controls button.back {
   background-image: url('assets/CASS-BACK_BLUE-5.svg');
-  border: 1px solid #083D5E;
 }
-
 
 .custom-audio-controls button.loop {
   background-image: url('assets/CASS-REPEAT_BLUE.svg');
-  border: 1px solid #083D5E;
+}
+
+.custom-audio-controls button.loop.active {
+  background-color: #14423A;
+  border: 2px solid #2b7f8c;
+  
 }
 
 
@@ -423,7 +415,6 @@ footer {
   background: #1D4450;
   border-radius: 2px;
 }
-
 .custom-audio-controls .volume-control input[type="range"]::-moz-range-track {
   height: 4px;
   background: #1D4450;
@@ -439,7 +430,6 @@ footer {
   border-radius: 50%;
   margin-top: -4px;
 }
-
 .custom-audio-controls .volume-control input[type="range"]::-moz-range-thumb {
   background: #1D4450;
   width: 12px;
@@ -450,12 +440,10 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-
   /* Layout Containers */
   main {
     flex-direction: column;
-    padding: 10px;
-    /* Reduced padding for mobile */
+    padding: 10px; /* Reduced padding for mobile */
   }
 
   .album-art {
@@ -476,20 +464,17 @@ footer {
     margin-left: 0;
     margin-top: 20px;
     padding: 15px;
-    position: static;
-    /* Remove sticky positioning on mobile */
+    position: static; /* Remove sticky positioning on mobile */
   }
 
   /* Footer Adjustments */
   footer {
-    position: static;
-    /* Remove fixed positioning on mobile */
+    position: static; /* Remove fixed positioning on mobile */
   }
 
   .foot-cont {
     flex-direction: column;
-    gap: 10px;
-    /* Add space between stacked items */
+    gap: 10px; /* Add space between stacked items */
     padding: 15px;
   }
 
@@ -497,19 +482,15 @@ footer {
   .custom-audio-controls {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    /* Responsive grid for square icons */
-    gap: 10px;
-    /* Spacing between grid items */
+    gap: 10px; /* Spacing between grid items */
     padding: 15px;
     align-items: center;
-    justify-items: center;
-    /* Centers each item within its cell */
+    justify-items: center; /* Centers each item within its cell */
   }
 
   /* Button Styles */
   .custom-audio-controls button {
-    width: 50px;
-    /* Square dimensions for icons */
+    width: 50px; /* Square dimensions for icons */
     height: 50px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -517,25 +498,20 @@ footer {
     border: none;
     outline: none;
     cursor: pointer;
-    background-color: transparent;
-    /* Optional: for no background color */
+    background-color: transparent; /* Optional: for no background color */
   }
 
   .custom-audio-controls .progress-container {
     width: 100%;
     margin: 0;
-    height: 20px;
-    /* Slightly larger touch target */
+    height: 20px; /* Slightly larger touch target */
   }
 
   .custom-audio-controls .time-display {
     margin: 0;
     text-align: left;
-    font-size: 1em;
-    /* Slightly larger for better readability */
+    font-size: 1em; /* Slightly larger for better readability */
   }
-
-
 
   /* Volume Controls */
   .custom-audio-controls .volume-control {
@@ -545,8 +521,7 @@ footer {
   }
 
   .custom-audio-controls .volume-control input[type="range"] {
-    width: 80%;
-    /* Take up most of the width */
+    width: 80%; /* Take up most of the width */
     margin: 10px 0;
   }
 }
