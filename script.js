@@ -510,9 +510,9 @@ albums.push(album14);
 artist1.albums.push(album14);
 
 
- //Songs for Album 14
+//Songs for Album 14
 album14.songs.push(
-new Song('1401', 'EXHIBIT A', 'https://storage.googleapis.com/ip-public-bucket1/Amsterdam-Concreet/EXHIBIT-A.mp3', '06:40', 1, 14, 1),
+  new Song('1401', 'EXHIBIT A', 'https://storage.googleapis.com/ip-public-bucket1/Amsterdam-Concreet/EXHIBIT-A.mp3', '06:40', 1, 14, 1),
   new Song('1402', 'EXHIBIT B', 'https://storage.googleapis.com/ip-public-bucket1/Amsterdam-Concreet/EXHIBIT-B.mp3', '10:42', 1, 14, 2),
   new Song('1403', 'EXHIBIT C1', 'https://storage.googleapis.com/ip-public-bucket1/Amsterdam-Concreet/EXHIBIT-C1.mp3', '08:39', 1, 14, 3),
   new Song('1404', 'EXHIBIT C2', 'https://storage.googleapis.com/ip-public-bucket1/Amsterdam-Concreet/EXHIBIT-C2.mp3', '03:19', 1, 14, 4),
@@ -760,7 +760,7 @@ album21.songs.push(
   new Song('2105', 'V: The Fire of Autumn', 'https://storage.googleapis.com/ip-public-bucket1/Jikan/V-The-Fire-of-Autumn.mp3', '05:13', 1, 21, 5),
   new Song('2106', 'VI: The Slumber of Snow', 'https://storage.googleapis.com/ip-public-bucket1/Jikan/VI-The-Slumber-of-Snow.mp3', '05:15', 1, 21, 6),
   new Song('2107', 'JIKAN: Continuous |Movements 1-6', 'https://storage.googleapis.com/ip-public-bucket1/Jikan/JIKAN-Continuous-Movements1-6.mp3', '36:12', 1, 21, 7),
-  
+
 );
 
 
@@ -801,8 +801,8 @@ album22.songs.push(
   new Song('2208', 'To be watched amongst the Random Forest', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/To-be-watched-amongst-the-Random-Forest.mp3', '07:00', 1, 22, 8),
   new Song('2209', 'Sigma', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Sigma.mp3', '08:39', 1, 22, 9),
   new Song('2210', 'Post Singularities', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Post-Singularities.mp3', '08:39', 1, 22, 10),
-  new Song('2211', 'The City Beyond!', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/The-City-Beyond!.mp3', '04:20', 1, 22,11),
-  new Song('2212', 'Behold the Eyes that see though you', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Behold-the-Eyes-that-see-though-you.mp3', '05:20', 1, 22,12),
+  new Song('2211', 'The City Beyond!', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/The-City-Beyond!.mp3', '04:20', 1, 22, 11),
+  new Song('2212', 'Behold the Eyes that see though you', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Behold-the-Eyes-that-see-though-you.mp3', '05:20', 1, 22, 12),
   new Song('2213', 'The Poems of Integers', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/The-Poems-of-Integers.mp3', '03:49', 1, 22, 13),
   new Song('2214', 'Task:', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Task.mp3', '04:38', 1, 22, 14),
   new Song('2215', 'Abzu', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Abzu.mp3', '06:01', 1, 22, 15),
@@ -844,7 +844,7 @@ album23.songs.push(
   new Song('2312', 'A Cloud’s visit to the Artist | Vignettes of Clouds', 'https://storage.googleapis.com/ip-public-bucket1/Vignettes-of-Clouds/A-Clouds-visit-to-the-Artist.mp3', '02:48', 1, 23, 12),
   new Song('2313', 'VI: The Slumber of Snow | JIKAN | Original Soundtrack ', 'https://storage.googleapis.com/ip-public-bucket1/Jikan/VI-The-Slumber-of-Snow.mp3', '05:15', 1, 23, 13),
   new Song('2314', 'Abzu | APOCRYPHA', 'https://storage.googleapis.com/ip-public-bucket1/Apocrypha/Abzu.mp3', '06:01', 1, 23, 14),
-  
+
 );
 
 // Now, create the data object that contains all the data
@@ -974,24 +974,24 @@ function displayAlbumDetails(albumId) {
     songList.classList.add('songList');
 
     // Iterate through each song in the album and create a list item
-album.songs.forEach(song => {
-  const songItem = document.createElement('li');
-  songItem.textContent = `${song.track_id}. ${song.name} `;
+    album.songs.forEach(song => {
+      const songItem = document.createElement('li');
+      songItem.textContent = `${song.track_id}. ${song.name} `;
 
-  // Create a span for the duration with a class
-  const durationSpan = document.createElement('span');
-  durationSpan.textContent = song.duration;
-  durationSpan.classList.add('song-duration'); // Add your custom class for styling
+      // Create a span for the duration with a class
+      const durationSpan = document.createElement('span');
+      durationSpan.textContent = song.duration;
+      durationSpan.classList.add('song-duration'); // Add your custom class for styling
 
-  // Append the duration span to the song item
-  songItem.appendChild(durationSpan);
-  songList.appendChild(songItem);
+      // Append the duration span to the song item
+      songItem.appendChild(durationSpan);
+      songList.appendChild(songItem);
 
-  // Add click event to play song
-  songItem.addEventListener('click', () => {
-    playSong(song.id, albumId);
-  });
-});
+      // Add click event to play song
+      songItem.addEventListener('click', () => {
+        playSong(song.id, albumId);
+      });
+    });
 
     // Append the song list to the songListContainer
     songListContainer.appendChild(songList);
