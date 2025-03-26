@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (logoLink) {
     logoLink.addEventListener('click', (e) => {
       e.preventDefault();
-      window.open('.https://xudor.github.io/_IP2/', '_blank', 'noopener,noreferrer,width=1280,height=800');
+      window.open('.https://xudor.github.io/_IP2/index.html', '_blank', 'noopener,noreferrer,width=1280,height=800');
     });
   }
 
