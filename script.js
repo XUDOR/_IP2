@@ -2,7 +2,7 @@
  * 1) STRIPE PRODUCT LINKS (fill in real URLs)
  **************************************************/
 const purchaseLinks = {
-  1:  "https://buy.stripe.com/example_Album1",
+  1:  "https://buy.stripe.com/aEUdRWfih6hz0QU6oo",
   2:  "https://buy.stripe.com/example_Album2",
   3:  "https://buy.stripe.com/example_Album3",
   4:  "https://buy.stripe.com/example_Album4",
