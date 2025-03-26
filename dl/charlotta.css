@@ -83,26 +83,34 @@ footer .Logo img {
 }
 
 .download-btn:hover {
-  background-color: #0ccfd8;
+  background-color: #FFFFE5;
 }
 
-@media (min-width: 769px) {
-  .Logo a {
-    display: inline-block;
-    transition: border-bottom 0.2s ease-in-out;
-    border-bottom: 2px solid transparent;
-  }
-
-  .Logo a:hover {
-    border-bottom: 2px solid #cadbda; /* or a color that fits your CHARLOTTA theme */
-  }
+.Logo a {
+  display: inline-block;
+  margin: 3px;
+  padding: 3px;
+  
+  border-bottom: 2px solid transparent;
 }
 
+.Logo a:hover {
+  background-color: #D12466; /* or a color that fits your CHARLOTTA theme */
+  transition: background-color 0.5s ease-in-out;
+}
+
+
+  
 
 @media (max-width: 768px) {
+  body {
+    display:flex;
+    flex-direction: column;  
+  } 
+
   .charlotta-sidebar {
     position: static;
-    width: 100%;
+    width: 80%;
     height: auto;
     box-shadow: none;
     margin-top: 20px;
