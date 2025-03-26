@@ -1,5 +1,5 @@
 body {
-  background-image: url('../assets/images/backgrounds/CHARLOTTA_noTEXT.png');
+  background-image: url('https://storage.googleapis.com/ip-public-bucket1/Charlotta/CHARLOTTA_noTEXT.png');
   background-size: contain;          /* preserves aspect ratio */
   background-position: top left;     /* aligns it to top left */
   background-repeat: no-repeat;      /* don’t tile it */
