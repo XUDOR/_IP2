@@ -1,0 +1,23 @@
+body {
+  background-image: url('../assets/images/backgrounds/CHARLOTTA_noTEXT.png');
+  background-size: contain;          /* preserves aspect ratio */
+  background-position: top left;     /* aligns it to top left */
+  background-repeat: no-repeat;      /* don’t tile it */
+  background-attachment: fixed;      /* keeps it pinned on scroll */
+  background-color: #620b1f;         /* fallback color for empty areas */
+}
+
+footer {
+background-color: #2b7f8c;
+}
+
+footer.Logo {
+  padding: 5px;
+  margin: 5px;
+}
+
+footer .Logo img {
+  width: 150px; /* Set the desired width */
+  height: auto;
+  display: block;
+}
