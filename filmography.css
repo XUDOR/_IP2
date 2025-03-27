@@ -1,59 +1,56 @@
-/* Reset some default styles for consistency */
+/* Reset */
 * {
-  box-sizing: border-box;
-}
-
-/* Main Film Grid Layout */
-.film-grid {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Grid Layout */
+  .film-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-/* Film Container Styling */
-.film-container {
-    background-color: #083D5E;
-    padding: 15px;
-    color: #cadbda;
-    border: 1px solid #2b7f8c;
-    text-align: center;
-    
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, 
-}
-
-.film-container:hover {
-    border: 1px solid #737F3A
-}
-
-/* Embedded Vimeo Video Styling */
-.film-container iframe {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 0;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-/* Film Description Styling */
-.film-container p {
-    font-size: 1em;
+  }
+  
+  /* Film Container */
+  .film-container {
+    background-color: #083D5E;
+    padding: 20px;
+    border: 1px solid #144654;
     color: #cadbda;
-    margin-top: 10px;
-    line-height: 1.5;
-}
-
-/* Responsive Adjustments for Smaller Screens */
-@media (max-width: 768px) {
-    .film-grid {
-        padding: 10px;
-    }
-
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  /* Vimeo iframe */
+  .film-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+  }
+  
+  /* Description text */
+  .filmDescription {
+    font-size: 1rem;
+    color: #a6cbd3;
+    padding-top: 10px;
+    text-align: center;
+  }
+  
+  /* Responsive - no padding shrink, just adapt layout */
+  @media (max-width: 768px) {
     .film-container {
-        padding: 10px;
+      padding: 10px;
     }
-
-    .film-container p {
-        font-size: 0.9em;
+  
+    .filmDescription {
+      font-size: 0.95rem;
     }
-}
+  }
+  
