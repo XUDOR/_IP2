@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+  
   const downloadLink = document.getElementById('download-zip');
   if (downloadLink) {
     downloadLink.addEventListener('click', function (e) {
