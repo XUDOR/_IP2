@@ -10,7 +10,7 @@ body {
 .domes-hero {
   width: 100vw;
   height: 100vh;
-  background-image: url('https://storage.googleapis.com/ip-public-bucket1/New-Domes-of-Earth/RS-DOMES-plain.png');
+  background-image: url('https://storage.googleapis.com/ip-public-bucket1/New-Domes-of-Earth/NEWDOMES-x.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -22,12 +22,12 @@ body {
   flex-direction: row;
   width: 100%;
   margin: 0;
-  background-color: #3A2319;
+  background-color: #00756F;
 }
 
 /* === Sidebar Content === */
 .domes-sidebar {
-  background-color: #59304C;
+  background-color: #00756F;
   color: #151211;
   padding: 20px;
   width: 100%;
@@ -43,13 +43,13 @@ body {
 
 .file-description {
   font-size: 0.85em;
-  color: #cb450b;
+  color: #A2C098;
   margin-top: 15px;
   line-height: 1.4;
 }
 
 .file-description span {
-  color: #0597A1;
+  color: #00082B;
 }
 
 /* === Download Button === */
@@ -57,8 +57,8 @@ body {
   display: inline-block;
   margin-top: 1em;
   padding: 10px 15px;
-  background-color: #0E5960;
-  color: #3A2319;
+  background-color: #0C525F;
+  color: #5EAB9A;
   text-decoration: none;
   border-radius: 2px;
   font-weight: bold;
@@ -66,13 +66,13 @@ body {
 }
 
 .download-btn:hover {
-  background-color: #cb450b;
-  color: #0C0101;
+  background-color: #062A4B;
+  color: #5EAB9A;
 }
 
 /* === Footer === */
 footer {
-  background-color: #0E5960;
+  background-color: #0C525F;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -95,7 +95,7 @@ footer .Logo img {
 }
 
 #domes-logo-link:hover {
-  background-color: #151211; /* CHARLOTTA pink */
+  background-color: #127A92;
 }
 
 
@@ -114,7 +114,7 @@ footer .Logo img {
   }
 
     
-  .domes-sidebar {
+  .-sidebar {
     width: 40vw;
     height: 100vh;
     overflow-y: auto;
