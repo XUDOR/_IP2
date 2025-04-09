@@ -5,7 +5,7 @@ const purchaseLinks = {
   1:  "https://buy.stripe.com/aEUdRWfih6hz0QU6oo",
   2:  "https://buy.stripe.com/5kA016gml49r7fibIJ",
   3:  "https://buy.stripe.com/28o016da90XfgPS5km",
-  4:  "https://buy.stripe.com/example_Album4",
+  4:  "https://buy.stripe.com/5kAdRW5HH9tLfLO7sv",
   5:  "https://buy.stripe.com/example_Album5",
   6:  "https://buy.stripe.com/example_Album6",
   7:  "https://buy.stripe.com/example_Album7",
