@@ -7,7 +7,7 @@ body {
 }
 
 /* === Full-width Hero Image === */
-.charlotta-hero {
+.object-hero {
   width: 100vw;
   height: 100vh;
   background-image: url('https://storage.googleapis.com/ip-public-bucket1/Objects-and-Particles/OBJECTS_PARTICLES-ALL.png');
@@ -17,7 +17,7 @@ body {
 }
 
 /* === Sidebar Container === */
-.charlotta-container {
+.object-container {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -26,7 +26,7 @@ body {
 }
 
 /* === Sidebar Content === */
-.charlotta-sidebar {
+.object-sidebar {
   background-color: #3D392F;
   color: #cadbda;
   padding: 20px;
@@ -86,7 +86,7 @@ footer .Logo img {
 }
 
 
-#charlotta-logo-link {
+#object-logo-link {
   cursor: pointer;
   display: inline-block;
   transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
@@ -94,7 +94,7 @@ footer .Logo img {
   border-radius: 4px;
 }
 
-#charlotta-logo-link:hover {
+#object-logo-link:hover {
   background-color: #0C0101; 
 }
 
@@ -103,18 +103,18 @@ footer .Logo img {
 
 /* === Responsive (Tablet and Up) === */
 @media (min-width: 768px) {
-  .charlotta-container {
+  .object-container {
     flex-direction: row;
     height: 100vh;
   }
 
-  .charlotta-hero {
+  .object-hero {
     width: 60vw;
     height: 100vh;
   }
 
     
-  .charlotta-sidebar {
+  .object-sidebar {
     width: 40vw;
     height: 100vh;
     overflow-y: auto;

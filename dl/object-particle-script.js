@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const logoLink = document.getElementById('charlotta-logo-link');
+  const logoLink = document.getElementById('object-logo-link');
   if (logoLink) {
     logoLink.addEventListener('click', (e) => {
       e.preventDefault();
